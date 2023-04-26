@@ -1,0 +1,3 @@
+id;nombre;fecha_incorporación;modulos
+0;Jesus;2023-04-23T17:31:51.258545600;[212da2bb-9246-49b4-a37d-2c909df35920,LDM,2,DAM|079b21c3-46dc-4501-bc06-1b5a47a0c108,LDM,1,ASIR|1672cc6c-f6ca-4756-ba61-d4eefb7fd50c,Sist,1,DAW]
+0;Manuel;2023-04-23T17:31:51.258545600;[32ccd60e-c51e-4962-8890-1640e9281ecd,Prog,2,ASIR|4ffdf906-760f-42f7-beb1-fd651d8304b0,Entor,2,SMR]

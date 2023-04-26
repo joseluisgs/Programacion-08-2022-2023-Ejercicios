@@ -1,0 +1,52 @@
+CREATE TABLE IF NOT EXISTS MotorEntity(
+    uuid TEXT PRIMARY KEY ,
+    modelo TEXT NOT NULL,
+    caballos INTEGER NOT NULL,
+    tipo TEXT NOT NULL,
+    cilindrada INTEGER,
+    capacidadGasolina REAL,
+    capacidadElectrica REAL,
+    carga REAL
+);
+
+CREATE TABLE IF NOT EXISTS VehiculoEntity(
+     uuid TEXT PRIMARY KEY,
+     modelo TEXT NOT NULL,
+     kilometro INTEGER NOT NULL,
+     anyoMatriculacion INTEGER NOT NULL,
+     apto INTEGER,
+     motorId TEXT NOT NULL,
+     FOREIGN KEY (motorId) REFERENCES MotorEntity ("uuid")
+);
+
+getAllVehiculos:
+SELECT * FROM VehiculoEntity;
+
+getMotorByUUID:
+SELECT * FROM MotorEntity
+WHERE uuid = ?;
+
+createMotor:
+INSERT INTO MotorEntity (uuid, modelo, caballos, tipo, cilindrada, capacidadGasolina, capacidadElectrica, carga) VALUES
+(?, ?, ?, ?, ?, ?, ?, ?);
+
+createVehiculo:
+INSERT INTO VehiculoEntity (uuid, modelo, kilometro, anyoMatriculacion, apto, motorId) VALUES
+(?, ?, ?, ?, ?, ?);
+
+updateVehiculo:
+UPDATE VehiculoEntity SET
+modelo = ?,
+kilometro = ?,
+anyoMatriculacion = ?,
+apto = ?, motorId = ?
+WHERE uuid = ?;
+
+deleteVehiculoByUUID:
+DELETE FROM VehiculoEntity WHERE uuid = ?;
+
+deleteAllMotores:
+DELETE FROM MotorEntity;
+
+deleteAllVehiculos:
+DELETE FROM VehiculoEntity;

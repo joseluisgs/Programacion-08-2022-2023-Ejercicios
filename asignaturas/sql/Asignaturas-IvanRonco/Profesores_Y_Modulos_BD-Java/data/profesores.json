@@ -1,0 +1,48 @@
+{
+   "profesor": [
+      {
+         "fecha_incorporación": "2023-04-23T17:06:13.637613400",
+         "modulos": [
+            {
+               "curso": "2",
+               "grado": "DAM",
+               "modulo_id": "1bb944aa-40fe-4d2a-91b6-10b897021c5f",
+               "nombre": "LDM"
+            },
+            {
+               "curso": "2",
+               "grado": "ASIR",
+               "modulo_id": "fe75d974-6c50-4647-b1c5-bf1b92175c17",
+               "nombre": "LDM"
+            },
+            {
+               "curso": "2",
+               "grado": "DAW",
+               "modulo_id": "da7ef134-68c6-4afa-90d5-0801063e81cb",
+               "nombre": "Sist"
+            }
+         ],
+         "nombre": "Jesus",
+         "profesor_id": "0"
+      },
+      {
+         "fecha_incorporación": "2023-04-23T17:06:13.637613400",
+         "modulos": [
+            {
+               "curso": "1",
+               "grado": "ASIR",
+               "modulo_id": "89d4b71d-73fc-4b60-842d-518f84879b02",
+               "nombre": "Prog"
+            },
+            {
+               "curso": "2",
+               "grado": "SMR",
+               "modulo_id": "825c3381-cce2-4da1-8719-4915ebe2a1d0",
+               "nombre": "Entor"
+            }
+         ],
+         "nombre": "Manuel",
+         "profesor_id": "0"
+      }
+   ]
+}

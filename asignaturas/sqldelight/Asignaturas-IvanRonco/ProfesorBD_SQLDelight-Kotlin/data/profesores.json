@@ -1,0 +1,19 @@
+{
+   "profesores": [
+      {
+         "uuid": "e6f5a53a-d7af-4c35-bb50-5b3b1e2f274b",
+         "nombre": "Ramón",
+         "experiencia": "24"
+      },
+      {
+         "uuid": "70676967-7a6d-47cb-a5b0-1c2d0408c9a9",
+         "nombre": "Iván",
+         "experiencia": "18"
+      },
+      {
+         "uuid": "7cd52ccf-9b13-4c29-aa5b-e436fd307d95",
+         "nombre": "Romeo",
+         "experiencia": "7"
+      }
+   ]
+}

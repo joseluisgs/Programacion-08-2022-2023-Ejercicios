@@ -1,0 +1,104 @@
+{
+   "personas": [
+      {
+         "nombre": "Iván",
+         "edad": "27",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Dante",
+         "edad": "38",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Roberto",
+         "edad": "29",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Nefesto",
+         "edad": "38",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Alejandrino",
+         "edad": "34",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Nefer",
+         "edad": "23",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Ash",
+         "edad": "21",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Nefesto",
+         "edad": "30",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Nero",
+         "edad": "20",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Erfesto",
+         "edad": "37",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Roberto",
+         "edad": "26",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Julieta",
+         "edad": "31",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Alex",
+         "edad": "38",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Nero",
+         "edad": "33",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Iván",
+         "edad": "31",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Erfesto",
+         "edad": "19",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Julieta",
+         "edad": "37",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Alberto",
+         "edad": "26",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Iván",
+         "edad": "25",
+         "tipo": "alumno"
+      },
+      {
+         "nombre": "Alejandrino",
+         "edad": "18",
+         "tipo": "alumno"
+      }
+   ]
+}
