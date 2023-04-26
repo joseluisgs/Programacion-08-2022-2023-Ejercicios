@@ -38,7 +38,7 @@ class DataBaseManagerIngredientDML : IDataBaseManagerDML<Ingrediente> {
                     stm.setLong(1, whereQuery.toLong())
                 }
                 if (whereQuery2 != null) {
-                    stm.setString(1, whereQuery.toString())
+                    stm.setString(1, whereQuery2.toString())
                 }
 
                 val resulSet = stm.executeQuery()
@@ -100,24 +100,30 @@ class DataBaseManagerIngredientDML : IDataBaseManagerDML<Ingrediente> {
 
         val sql = """
             UPDATE ${newEntity::class.simpleName}Table 
-            SET id = ?, name = ?, price = ? , stock = ?, update_at = ?, avaliable = ? 
+            SET id = null, name = ?, price = ? , stock = ?, update_at = ?, avaliable = ? 
             WHERE id = ?
         """.trimIndent()
+
+        var idCopied: Long = 0
 
         db().use {
             it.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS).use { stm ->
                 // Pasamos los parámetros para introducir
-                stm.setLong(1, newEntity.id)
-                stm.setString(2, newEntity.name)
-                stm.setDouble(3, newEntity.price)
-                stm.setInt(4, newEntity.stock)
-                stm.setString(5, newEntity.updatedAt.toString())
-                stm.setBoolean(6, newEntity.avaliable)
-                stm.setLong(7, newEntity.id)
+                stm.setString(1, newEntity.name)
+                stm.setDouble(2, newEntity.price)
+                stm.setInt(3, newEntity.stock)
+                stm.setString(4, newEntity.updatedAt.toString())
+                stm.setBoolean(5, newEntity.avaliable)
+                stm.setLong(6, newEntity.id)
                 stm.executeUpdate()
+
+                val claves = stm.generatedKeys
+                if (claves.next()) {
+                    idCopied = claves.getLong(1)
+                }
             }
         }
-        return newEntity.copy(updatedAt = updatedTime)
+        return newEntity.copy(id = idCopied, updatedAt = updatedTime)
     }
 
     override fun deleteRecord(entityToDelete: Ingrediente): Boolean {

@@ -32,7 +32,7 @@ class DataBaseManagerBurguerDML : IDataBaseManagerDML<Burguer> {
                 }
 
                 if (whereQuery2 != null) {
-                    stm.setString(1, whereQuery.toString())
+                    stm.setString(1, whereQuery2.toString())
                 }
 
                 val resulSet = stm.executeQuery()
