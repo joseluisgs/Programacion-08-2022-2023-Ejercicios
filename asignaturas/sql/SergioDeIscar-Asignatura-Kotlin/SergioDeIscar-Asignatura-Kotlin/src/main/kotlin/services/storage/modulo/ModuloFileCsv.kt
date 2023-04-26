@@ -9,14 +9,11 @@ import mu.KotlinLogging
 import java.io.File
 import java.io.IOException
 
-private val LOCAL_PATH = "${System.getProperty("user.dir")}${File.separator}"
-private val LOCAL_PATH_RESOURCES = "${LOCAL_PATH}src${File.separator}main${File.separator}resources${File.separator}"
-
 private val logger = KotlinLogging.logger {  }
 
 object ModuloFileCsv: ModuloStorageService{
     private val localPath = "${AppConfig.APP_DATA}${File.separator}modulo.csv"
-    private val resourcesPath = "${LOCAL_PATH_RESOURCES}modulo.csv"
+    private val resourcesPath = "${AppConfig.APP_PATH_RESOURCES}modulo.csv"
 
     override fun saveAll(elements: List<Modulo>): List<Modulo> {
         logger.debug { "ModuloFileCsv ->\tsaveAll" }

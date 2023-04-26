@@ -19,14 +19,11 @@ import java.io.File
 import java.io.IOException
 import java.util.*
 
-private val LOCAL_PATH = "${System.getProperty("user.dir")}${File.separator}"
-private val LOCAL_PATH_RESOURCES = "${LOCAL_PATH}src${File.separator}main${File.separator}resources${File.separator}"
-
 private val logger = KotlinLogging.logger {  }
 
 object ProfesorFileCsv: ProfesorStorageService{
     private val localPath = "${AppConfig.APP_DATA}${File.separator}profesor.csv"
-    private val resourcesPath = "${LOCAL_PATH_RESOURCES}profesor.csv"
+    private val resourcesPath = "${AppConfig.APP_PATH_RESOURCES}profesor.csv"
 
     override fun saveAll(elements: List<Profesor>): List<Profesor> {
         logger.debug { "ProfesorFileCsv ->\tsaveAll" }
@@ -45,7 +42,7 @@ object ProfesorFileCsv: ProfesorStorageService{
         logger.debug { "ProfesorFileCsv ->\tloadAll" }
         val file = File(resourcesPath)
         if (!file.exists() || !file.canRead()) throw IOException("ERROR: ProfesorFileCsv ->\tNo se puede leer en el fichero CSV")
-        return file.readLines()
+        val paco = file.readLines()
             .drop(1)
             .map { it.split(",") }
             .map { ProfesorDto(
@@ -53,10 +50,11 @@ object ProfesorFileCsv: ProfesorStorageService{
                 fechaIncorporacion = it[1],
                 modulos =  getModulos(it[2])
             ) }.map { it.toClass() }
+        return paco
     }
 
     private fun getModulos(csv: String): ModulosDto {
-        // No se si esto es correcto...
+        // No se si esto es correcto... En vez de escribir todos los campos del modulo en el csv, solo escribo el uuid
         val modulos = mutableListOf<Modulo>()
         val moduloController = ModuloController(
             ModuloRepositoryMap(),
