@@ -1,0 +1,56 @@
+<conductores>
+   <ConductorDto UUID="31c6ac2d-8f7f-4e28-ac69-301ef38f98b2">
+      <nombre>Paco</nombre>
+      <fechaCarnet>2021-04-09</fechaCarnet>
+      <coches>
+         <coches class="java.util.ArrayList">
+            <coche id="1" idConductor="31c6ac2d-8f7f-4e28-ac69-301ef38f98b2">
+               <marca>Abarth</marca>
+               <modelo>Abarth 500C</modelo>
+               <precio>2345.23</precio>
+               <motor>GASOLINA</motor>
+            </coche>
+            <coche id="3" idConductor="31c6ac2d-8f7f-4e28-ac69-301ef38f98b2">
+               <marca>Alpine2</marca>
+               <modelo>Alpine A1102</modelo>
+               <precio>62200.22</precio>
+               <motor>ELECTRICO</motor>
+            </coche>
+            <coche id="4" idConductor="31c6ac2d-8f7f-4e28-ac69-301ef38f98b2">
+               <marca>Alpine3</marca>
+               <modelo>Alpine A1103</modelo>
+               <precio>62200.22</precio>
+               <motor>ELECTRICO</motor>
+            </coche>
+         </coches>
+      </coches>
+   </ConductorDto>
+   <ConductorDto UUID="520435b1-2e5f-446d-97a1-d174d74c4edd">
+      <nombre>Pedro</nombre>
+      <fechaCarnet>2019-09-20</fechaCarnet>
+      <coches>
+         <coches class="java.util.ArrayList">
+            <coche id="2" idConductor="520435b1-2e5f-446d-97a1-d174d74c4edd">
+               <marca>Alfa Romeo</marca>
+               <modelo>Alfa Romeo Giulia</modelo>
+               <precio>50689.4</precio>
+               <motor>DIESEL</motor>
+            </coche>
+            <coche id="5" idConductor="520435b1-2e5f-446d-97a1-d174d74c4edd">
+               <marca>Alfa Romeo2</marca>
+               <modelo>Alfa Romeo Giulia</modelo>
+               <precio>50689.4</precio>
+               <motor>DIESEL</motor>
+            </coche>
+         </coches>
+      </coches>
+   </ConductorDto>
+   <ConductorDto UUID="a36527f7-de9c-461f-bbea-755f6aabffb0">
+      <nombre>Ana</nombre>
+      <fechaCarnet>2010-05-26</fechaCarnet>
+   </ConductorDto>
+   <ConductorDto UUID="5adce674-fbf0-478e-b1dc-a250555088b8">
+      <nombre>Pepa</nombre>
+      <fechaCarnet>2000-09-23</fechaCarnet>
+   </ConductorDto>
+</conductores>

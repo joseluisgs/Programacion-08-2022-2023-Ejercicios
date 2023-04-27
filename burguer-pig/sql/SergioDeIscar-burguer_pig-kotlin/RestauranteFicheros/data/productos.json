@@ -1,0 +1,364 @@
+[
+	{
+		"id": "1",
+		"nombre": "Fanta",
+		"precio": "6,43 €",
+		"tipo": "Bebida",
+		"capacidad": "1120"
+	},
+	{
+		"id": "2",
+		"nombre": "Fanta",
+		"precio": "3,49 €",
+		"tipo": "Bebida",
+		"capacidad": "231"
+	},
+	{
+		"id": "3",
+		"nombre": "Pequeña",
+		"precio": "23,90 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "1",
+				"nombre": "Tomate",
+				"precio": "4,62 €"
+			},
+			{
+				"id": "2",
+				"nombre": "Tomate",
+				"precio": "8,14 €"
+			},
+			{
+				"id": "3",
+				"nombre": "Lechuga",
+				"precio": "6,07 €"
+			},
+			{
+				"id": "4",
+				"nombre": "Tomate",
+				"precio": "5,07 €"
+			}
+		]
+	},
+	{
+		"id": "4",
+		"nombre": "Mediana",
+		"precio": "17,52 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "5",
+				"nombre": "Lechuga",
+				"precio": "10,97 €"
+			},
+			{
+				"id": "6",
+				"nombre": "Lechuga",
+				"precio": "1,92 €"
+			},
+			{
+				"id": "7",
+				"nombre": "Lechuga",
+				"precio": "1,89 €"
+			},
+			{
+				"id": "8",
+				"nombre": "Lechuga",
+				"precio": "2,74 €"
+			}
+		]
+	},
+	{
+		"id": "5",
+		"nombre": "Pequeña",
+		"precio": "2,49 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "9",
+				"nombre": "Lechuga",
+				"precio": "2,49 €"
+			}
+		]
+	},
+	{
+		"id": "6",
+		"nombre": "Fanta",
+		"precio": "6,43 €",
+		"tipo": "Bebida",
+		"capacidad": "164"
+	},
+	{
+		"id": "7",
+		"nombre": "Grande",
+		"precio": "8,93 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "10",
+				"nombre": "Cebolla",
+				"precio": "8,93 €"
+			}
+		]
+	},
+	{
+		"id": "8",
+		"nombre": "CocaCola",
+		"precio": "11,11 €",
+		"tipo": "Bebida",
+		"capacidad": "238"
+	},
+	{
+		"id": "9",
+		"nombre": "Pequeña",
+		"precio": "45,48 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "11",
+				"nombre": "Cebolla",
+				"precio": "10,70 €"
+			},
+			{
+				"id": "12",
+				"nombre": "Tomate",
+				"precio": "10,87 €"
+			},
+			{
+				"id": "13",
+				"nombre": "Lechuga",
+				"precio": "9,87 €"
+			},
+			{
+				"id": "14",
+				"nombre": "Cebolla",
+				"precio": "10,22 €"
+			},
+			{
+				"id": "15",
+				"nombre": "Cebolla",
+				"precio": "3,82 €"
+			}
+		]
+	},
+	{
+		"id": "10",
+		"nombre": "Fanta",
+		"precio": "5,22 €",
+		"tipo": "Bebida",
+		"capacidad": "1117"
+	},
+	{
+		"id": "11",
+		"nombre": "Fanta",
+		"precio": "3,68 €",
+		"tipo": "Bebida",
+		"capacidad": "978"
+	},
+	{
+		"id": "12",
+		"nombre": "Mediana",
+		"precio": "9,76 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "16",
+				"nombre": "Lechuga",
+				"precio": "9,76 €"
+			}
+		]
+	},
+	{
+		"id": "13",
+		"nombre": "Fanta",
+		"precio": "3,30 €",
+		"tipo": "Bebida",
+		"capacidad": "984"
+	},
+	{
+		"id": "14",
+		"nombre": "CocaCola",
+		"precio": "12,54 €",
+		"tipo": "Bebida",
+		"capacidad": "703"
+	},
+	{
+		"id": "15",
+		"nombre": "Agua",
+		"precio": "11,26 €",
+		"tipo": "Bebida",
+		"capacidad": "771"
+	},
+	{
+		"id": "16",
+		"nombre": "Pequeña",
+		"precio": "22,33 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "17",
+				"nombre": "Lechuga",
+				"precio": "9,06 €"
+			},
+			{
+				"id": "18",
+				"nombre": "Cebolla",
+				"precio": "3,32 €"
+			},
+			{
+				"id": "19",
+				"nombre": "Cebolla",
+				"precio": "9,95 €"
+			}
+		]
+	},
+	{
+		"id": "17",
+		"nombre": "Pequeña",
+		"precio": "28,79 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "20",
+				"nombre": "Tomate",
+				"precio": "8,96 €"
+			},
+			{
+				"id": "21",
+				"nombre": "Tomate",
+				"precio": "7,27 €"
+			},
+			{
+				"id": "22",
+				"nombre": "Cebolla",
+				"precio": "10,15 €"
+			},
+			{
+				"id": "23",
+				"nombre": "Cebolla",
+				"precio": "2,40 €"
+			}
+		]
+	},
+	{
+		"id": "18",
+		"nombre": "Pequeña",
+		"precio": "7,21 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "24",
+				"nombre": "Lechuga",
+				"precio": "7,21 €"
+			}
+		]
+	},
+	{
+		"id": "19",
+		"nombre": "Pequeña",
+		"precio": "27,15 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "25",
+				"nombre": "Cebolla",
+				"precio": "3,72 €"
+			},
+			{
+				"id": "26",
+				"nombre": "Cebolla",
+				"precio": "4,54 €"
+			},
+			{
+				"id": "27",
+				"nombre": "Cebolla",
+				"precio": "4,67 €"
+			},
+			{
+				"id": "28",
+				"nombre": "Tomate",
+				"precio": "6,00 €"
+			},
+			{
+				"id": "29",
+				"nombre": "Cebolla",
+				"precio": "8,21 €"
+			}
+		]
+	},
+	{
+		"id": "20",
+		"nombre": "Pequeña",
+		"precio": "31,31 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "30",
+				"nombre": "Tomate",
+				"precio": "8,21 €"
+			},
+			{
+				"id": "31",
+				"nombre": "Lechuga",
+				"precio": "10,22 €"
+			},
+			{
+				"id": "32",
+				"nombre": "Tomate",
+				"precio": "3,13 €"
+			},
+			{
+				"id": "33",
+				"nombre": "Cebolla",
+				"precio": "4,33 €"
+			},
+			{
+				"id": "34",
+				"nombre": "Tomate",
+				"precio": "5,42 €"
+			}
+		]
+	},
+	{
+		"id": "21",
+		"nombre": "Agua",
+		"precio": "10,75 €",
+		"tipo": "Bebida",
+		"capacidad": "838"
+	},
+	{
+		"id": "22",
+		"nombre": "Mediana",
+		"precio": "1,98 €",
+		"tipo": "Hamburguesa",
+		"ingredientes": [
+			{
+				"id": "35",
+				"nombre": "Tomate",
+				"precio": "1,98 €"
+			}
+		]
+	},
+	{
+		"id": "23",
+		"nombre": "Agua",
+		"precio": "10,81 €",
+		"tipo": "Bebida",
+		"capacidad": "769"
+	},
+	{
+		"id": "24",
+		"nombre": "CocaCola",
+		"precio": "11,97 €",
+		"tipo": "Bebida",
+		"capacidad": "885"
+	},
+	{
+		"id": "25",
+		"nombre": "CocaCola",
+		"precio": "5,45 €",
+		"tipo": "Bebida",
+		"capacidad": "189"
+	}
+]

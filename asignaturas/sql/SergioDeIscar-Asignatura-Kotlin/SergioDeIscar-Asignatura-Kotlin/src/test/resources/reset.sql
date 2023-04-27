@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS tProfesor_Modulo;
+DROP TABLE IF EXISTS tProfesor;
+DROP TABLE IF EXISTS tModulo;
