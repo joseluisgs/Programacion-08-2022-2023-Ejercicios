@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS Conductor;
+CREATE TABLE IF NOT EXISTS Conductor(
+    uuid TEXT PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    fechaCarnet TEXT NOT NULL,
+);
+DROP TABLE IF EXISTS Coche;
+CREATE TABLE IF NOT EXISTS Coche(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    marca TEXT NOT NULL,
+    modelo TEXT NOT NULL,
+    precio REAL NOT NULL,
+    motor TEXT NOT NULL,
+    conductorId TEXT NOT NULL REFERENCES Conductor (uuid)
+);
