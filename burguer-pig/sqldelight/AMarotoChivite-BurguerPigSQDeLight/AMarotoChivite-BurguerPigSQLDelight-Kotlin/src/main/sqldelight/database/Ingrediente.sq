@@ -1,0 +1,31 @@
+CREATE TABLE IF NOT EXISTS IngredienteTable(
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    name          TEXT NOT NULL,
+    price         REAL    NOT NULL,
+    stock         INTEGER NOT NULL,
+    created_at    TEXT    NOT NULL,
+    updated_at    TEXT    NOT NULL,
+    avaliable     INTEGER NOT NULL
+);
+
+-- Operaciones CRUD (solo probaré con Burguer)
+getAll:
+SELECT * FROM IngredienteTable;
+
+removeAll:
+DELETE FROM IngredienteTable;
+
+getById:
+SELECT * FROM IngredienteTable WHERE id = ?;
+
+insert:
+INSERT INTO IngredienteTable (id, name, price, stock,created_at,updated_at,avaliable) VALUES (?, ?, ?,?,?,?,?);
+
+update:
+UPDATE IngredienteTable SET name = ?, price = ? ,stock = ?, created_at= ?, updated_at = ?,avaliable = ? WHERE id = ?;
+
+delete:
+DELETE FROM IngredienteTable WHERE id = ?;
+
+
+

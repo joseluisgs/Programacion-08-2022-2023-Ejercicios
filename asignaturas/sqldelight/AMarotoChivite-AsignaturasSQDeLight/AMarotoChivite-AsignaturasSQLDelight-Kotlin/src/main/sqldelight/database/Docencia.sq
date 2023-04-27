@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS DocenciaTable(
+    idProfesor        INTEGER    NOT NULL,
+    uuidModulo        TEXT       NOT NULL,
+    curso             INTEGER    NOT NULL,
+    grado             TEXT       NOT NULL,
+    PRIMARY KEY (idProfesor, uuidModulo)
+);
+
+-- Operaciones CRUD
+getAll:
+SELECT * FROM DocenciaTable;
+
+removeAll:
+DELETE FROM DocenciaTable;
+
+getById:
+SELECT * FROM DocenciaTable WHERE idProfesor = ? AND uuidModulo = ?;
+
+insert:
+INSERT INTO DocenciaTable (idProfesor, uuidModulo, curso, grado) VALUES (?,?, ?, ?);
+
+update:
+UPDATE DocenciaTable SET curso = ?, grado = ? WHERE idProfesor = ? AND uuidModulo = ?;
+
+delete:
+DELETE FROM DocenciaTable  WHERE idProfesor = ? AND uuidModulo = ?;
+
+

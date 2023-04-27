@@ -1,0 +1,14 @@
+[
+  {
+    "idProfesor": 1,
+    "uuidModulo": "1a886204-1c65-4a67-813a-4d3dcee120ed",
+    "curso": 1,
+    "grado": "DAM"
+  },
+  {
+    "idProfesor": 1,
+    "uuidModulo": "0ac04540-077c-4a05-a4c0-91e266dc6a1f",
+    "curso": 2,
+    "grado": "DAM"
+  }
+]

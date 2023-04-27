@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS ProfesorTable(
+    id        INTEGER    NOT NULL PRIMARY KEY,
+    name        TEXT    NOT NULL,
+    dateInit       TEXT NOT NULL
+);
+
+-- Operaciones CRUD (solo probaré con Burguer)
+getAll:
+SELECT * FROM ProfesorTable;
+
+removeAll:
+DELETE FROM ProfesorTable;
+
+getById:
+SELECT * FROM ProfesorTable WHERE id = ?;
+
+insert:
+INSERT INTO ProfesorTable (id, name, dateInit) VALUES (?, ?, ?);
+
+update:
+UPDATE ProfesorTable SET name = ?, dateInit = ? WHERE id = ?;
+
+delete:
+DELETE FROM ProfesorTable WHERE id = ?;
+
+
+
