@@ -6,7 +6,7 @@ import config.AppConfig
 import controllers.modulo.ModuloController
 import dto.ModulosDto
 import dto.ProfesorDto
-import dto.ProfesoresDto
+import exceptions.ProfesorFileException
 import mappers.toClass
 import mappers.toDto
 import models.Modulo
@@ -28,7 +28,7 @@ object ProfesorFileCsv: ProfesorStorageService{
     override fun saveAll(elements: List<Profesor>): List<Profesor> {
         logger.debug { "ProfesorFileCsv ->\tsaveAll" }
         val file = File(localPath)
-        if (file.exists() && !file.canWrite()) throw IOException("ERROR: ProfesorFileCsv ->\tNo se puede escribir en el fichero CSV")
+        if (file.exists() && !file.canWrite()) throw ProfesorFileException.ProfesorFileCantWrite("CSV")
         file.writeText("nombre,incorporación,modulo\n")
         elements.map { it.toDto() }.forEach {
             file.appendText(
@@ -41,7 +41,7 @@ object ProfesorFileCsv: ProfesorStorageService{
     override fun loadAll(): List<Profesor> {
         logger.debug { "ProfesorFileCsv ->\tloadAll" }
         val file = File(resourcesPath)
-        if (!file.exists() || !file.canRead()) throw IOException("ERROR: ProfesorFileCsv ->\tNo se puede leer en el fichero CSV")
+        if (!file.exists() || !file.canRead()) throw ProfesorFileException.ProfesorFileCantReed("CSV")
         val paco = file.readLines()
             .drop(1)
             .map { it.split(",") }

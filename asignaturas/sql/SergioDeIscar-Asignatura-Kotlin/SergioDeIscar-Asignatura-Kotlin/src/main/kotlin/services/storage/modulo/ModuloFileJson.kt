@@ -5,6 +5,7 @@ import com.squareup.moshi.adapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import config.AppConfig
 import dto.ModulosDto
+import exceptions.ModuloFileException
 import mappers.toClass
 import mappers.toDto
 import models.Modulo
@@ -21,7 +22,7 @@ object ModuloFileJson: ModuloStorageService {
     override fun saveAll(elements: List<Modulo>): List<Modulo> {
         logger.debug { "ModuloFileJson ->\tsaveAll" }
         val file = File(localPath)
-        if (file.exists() && !file.canWrite()) throw Exception("ERROR: ModuloFileJson ->\tNo se puede escribir en el fichero JSON")
+        if (file.exists() && !file.canWrite()) throw ModuloFileException.ModuloFileCantWrite("JSON")
         val jsonAdapter = moshi.adapter<ModulosDto>()
         file.writeText(jsonAdapter.indent("\t").toJson(ModulosDto(elements.map { it.toDto() })))
         return elements
@@ -31,7 +32,7 @@ object ModuloFileJson: ModuloStorageService {
     override fun loadAll(): List<Modulo> {
         logger.debug { "ModuloFileJson ->\tloadAll" }
         val file = File(localPath)
-        if (!file.exists() || !file.canRead()) throw Exception("ERROR: ModuloFileJson ->\tNo se puede leer en el fichero JSON")
+        if (!file.exists() || !file.canRead()) throw ModuloFileException.ModuloFileCantWrite("JSON")
         val jsonAdapter = moshi.adapter<ModulosDto>()
         return jsonAdapter.indent("\t").fromJson(file.readText())?.let { it.modulos.map { it.toClass() } } ?: return emptyList()
     }

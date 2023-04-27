@@ -1,0 +1,7 @@
+id,marca,modelo,precio,motor,idConductor
+1,Abarth,Abarth 500C,2345.23,GASOLINA,31c6ac2d-8f7f-4e28-ac69-301ef38f98b2
+2,Alfa Romeo,Alfa Romeo Giulia,50689.4,DIESEL,520435b1-2e5f-446d-97a1-d174d74c4edd
+3,Alpine,Alpine A110,62200.22,ELECTRICO,31c6ac2d-8f7f-4e28-ac69-301ef38f98b2
+4,Alpine2,Alpine A1102,62200.22,ELECTRICO,31c6ac2d-8f7f-4e28-ac69-301ef38f98b2
+5,Alpine3,Alpine A1103,62200.22,ELECTRICO,31c6ac2d-8f7f-4e28-ac69-301ef38f98b2
+6,Alfa Romeo2,Alfa Romeo Giulia,50689.4,DIESEL,520435b1-2e5f-446d-97a1-d174d74c4edd

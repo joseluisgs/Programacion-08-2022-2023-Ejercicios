@@ -5,6 +5,7 @@ import com.squareup.moshi.adapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import config.AppConfig
 import dto.ProfesoresDto
+import exceptions.ProfesorFileException
 import mappers.toClass
 import mappers.toDto
 import models.Profesor
@@ -21,7 +22,7 @@ object ProfesorFileJson: ProfesorStorageService {
     override fun saveAll(elements: List<Profesor>): List<Profesor> {
         logger.debug { "ProfesorFileJson ->\tsaveAll" }
         val file = File(localPath)
-        if (file.exists() && !file.canWrite()) throw Exception("ERROR: ProfesorFileJson ->\tNo se puede escribir en el fichero JSON")
+        if (file.exists() && !file.canWrite()) throw ProfesorFileException.ProfesorFileCantWrite("JSON")
         val jsonAdapter = moshi.adapter<ProfesoresDto>()
         file.writeText(jsonAdapter.indent("\t").toJson(ProfesoresDto(elements.map { it.toDto() })))
         return elements
@@ -31,7 +32,7 @@ object ProfesorFileJson: ProfesorStorageService {
     override fun loadAll(): List<Profesor> {
         logger.debug { "ProfesorFileJson ->\tloadAll" }
         val file = File(localPath)
-        if (!file.exists() || !file.canRead()) throw Exception("ERROR: ProfesorFileJson ->\tNo se puede leer en el fichero JSON")
+        if (!file.exists() || !file.canRead()) throw ProfesorFileException.ProfesorFileCantReed("JSON")
         val jsonAdapter = moshi.adapter<ProfesoresDto>()
         return jsonAdapter.indent("\t").fromJson(file.readText())?.let { it.profesores.map { it.toClass() } } ?: return emptyList()
     }

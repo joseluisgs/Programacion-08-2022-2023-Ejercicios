@@ -23,8 +23,8 @@ data class ProductoDto(
     @param:Attribute(name = "tipo")
     val tipo: String,
 
-    @field:ElementList(name = "ingredientes", required = false)
-    @param:ElementList(name = "ingredientes", required = false)
+    @field:ElementList(name = "ingredientes", required = false, inline = true)
+    @param:ElementList(name = "ingredientes", required = false, inline = true)
     val ingredientes: List<IngredienteDto>? = null,
 
     @field:Element(name = "capacidad", required = false)

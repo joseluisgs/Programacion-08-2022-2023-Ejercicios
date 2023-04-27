@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS tCoche;
+DROP TABLE IF EXISTS tConductor;

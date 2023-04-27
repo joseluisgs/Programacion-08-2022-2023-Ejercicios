@@ -2,6 +2,7 @@ package services.storage.profesor
 
 import config.AppConfig
 import dto.ProfesoresDto
+import exceptions.ProfesorFileException
 import mappers.toClass
 import mappers.toDto
 import models.Profesor
@@ -18,7 +19,7 @@ object ProfesorFileXML: ProfesorStorageService {
     override fun saveAll(elements: List<Profesor>): List<Profesor> {
         logger.debug { "ProfesorFileXML ->\tsaveAll" }
         val file = File(localPath)
-        if (file.exists() && !file.canWrite()) throw IOException("ERROR: ProfesorFileXML ->\tNo se puede escribir en el fichero XML")
+        if (file.exists() && !file.canWrite()) throw ProfesorFileException.ProfesorFileCantWrite("XML")
         val persister = Persister()
         persister.write(ProfesoresDto(elements.map { it.toDto() }), file)
         return elements
@@ -27,7 +28,7 @@ object ProfesorFileXML: ProfesorStorageService {
     override fun loadAll(): List<Profesor> {
         logger.debug { "ProfesorFileXML ->\tloadAll" }
         val file = File(localPath)
-        if (!file.exists() || !file.canRead()) throw IOException("ERROR: ProfesorFileXML ->\tNo se puede leer en el fichero XML")
+        if (!file.exists() || !file.canRead()) throw ProfesorFileException.ProfesorFileCantReed("XML")
         val persister = Persister()
         return persister.read(ProfesoresDto::class.java, file).profesores.map { it.toClass() }
     }

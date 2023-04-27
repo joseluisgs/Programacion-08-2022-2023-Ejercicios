@@ -36,7 +36,6 @@ abstract class ProfesorRepositoryGenericTest {
     fun findByIdTest(){
         val result = repository.findById(1)
         val resultFail = repository.findById(4)
-        val paco = repository.findAll()
         println()
         assertAll(
             { assertEquals(getProfesoresDefault()[0], result) },
@@ -47,7 +46,6 @@ abstract class ProfesorRepositoryGenericTest {
     @Test
     fun createTest(){
         val profesor = getProfesoresDefault()[2].copy(id = 4, nombre = "NEW")
-        val paco = repository.findAll()
         println()
         repository.save(profesor)
         assertAll(
@@ -60,7 +58,6 @@ abstract class ProfesorRepositoryGenericTest {
     fun updateTest(){
         val profesor = getProfesoresDefault()[2].copy(nombre = "NEW")
         repository.save(profesor)
-        val paco = repository.findAll()
         println()
         assertAll(
             { assertEquals(3, repository.findAll().toList().size) },
@@ -71,7 +68,6 @@ abstract class ProfesorRepositoryGenericTest {
     @Test
     fun deleteByIdTest(){
         repository.deleteById(1)
-        val paco = repository.findAll()
         println()
         assertAll(
             { assertEquals(2, repository.findAll().toList().size) },
