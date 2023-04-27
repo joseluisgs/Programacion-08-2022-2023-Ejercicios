@@ -1,0 +1,33 @@
+CREATE TABLE ProfesorEntity(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    uuid TEXT UNIQUE NOT NULL,
+    nombre TEXT NOT NULL,
+    experiencia INTEGER NOT NULL
+);
+
+getAllProfesores:
+SELECT * FROM ProfesorEntity;
+
+getProfesorById:
+SELECT * FROM ProfesorEntity
+WHERE id = ?;
+
+createProfesor:
+INSERT INTO ProfesorEntity (uuid, nombre, experiencia)
+VALUES ( ?, ?, ?);
+
+getLastInsertedProfesor:
+SELECT * FROM ProfesorEntity
+WHERE id = last_insert_rowid();
+
+updateProfesor:
+UPDATE ProfesorEntity
+SET nombre = ?, experiencia = ?
+WHERE id = ?;
+
+deleteProfesor:
+DELETE FROM ProfesorEntity
+WHERE id = ?;
+
+deleteAll:
+DELETE FROM ProfesorEntity;

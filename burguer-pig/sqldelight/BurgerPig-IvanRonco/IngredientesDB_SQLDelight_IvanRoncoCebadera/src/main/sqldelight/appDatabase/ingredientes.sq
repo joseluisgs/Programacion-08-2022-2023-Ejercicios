@@ -1,0 +1,36 @@
+CREATE TABLE IngredienteEntity(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    uuid TEXT UNIQUE NOT NULL,
+    nombre TEXT NOT NULL,
+    precio REAL NOT NULL,
+    cantidad INTEGER NOT NULL,
+    createdAt TEXT NOT NULL,
+    updatedAt TEXT NOT NULL,
+    disponible INTEGER NOT NULL
+);
+
+findAllIngredientes:
+SELECT * FROM IngredienteEntity;
+
+getIngredienteById:
+SELECT * FROM IngredienteEntity
+WHERE id = ?;
+
+createIngrediente:
+INSERT INTO IngredienteEntity (uuid, nombre, cantidad, precio, createdAt, updatedAt, disponible) VALUES
+( ?, ?, ?, ?, ?, ?, ?);
+
+updateIngrediente:
+UPDATE IngredienteEntity SET nombre = ?, precio = ?, cantidad = ?, disponible = ?, updatedAt = ?
+WHERE id = ?;
+
+getLastInsertedIngrediente:
+SELECT * FROM IngredienteEntity
+WHERE id = last_insert_rowid();
+
+deleteIngrediente:
+DELETE FROM IngredienteEntity
+WHERE id = ?;
+
+deleteAllIngredientes:
+DELETE FROM IngredienteEntity;

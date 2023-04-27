@@ -1,0 +1,46 @@
+{
+   "modulo": [
+      {
+         "curso": "1",
+         "grado": "DAM",
+         "modulo_id": "0087d459-f02e-49b2-a051-dffdd9f1a1ee",
+         "nombre": "LDM"
+      },
+      {
+         "curso": "1",
+         "grado": "ASIR",
+         "modulo_id": "aecf3fee-719c-4d4f-8deb-a42b08e913db",
+         "nombre": "LDM"
+      },
+      {
+         "curso": "2",
+         "grado": "DAW",
+         "modulo_id": "bc4d7198-3365-422f-b1a6-1baf2635e983",
+         "nombre": "Sist"
+      },
+      {
+         "curso": "2",
+         "grado": "SMR",
+         "modulo_id": "44fd3d34-678d-4477-b0d7-e12ca62eb652",
+         "nombre": "BD"
+      },
+      {
+         "curso": "1",
+         "grado": "ASIR",
+         "modulo_id": "ecc5cdf7-c76d-4c45-aceb-afbe785842a3",
+         "nombre": "Prog"
+      },
+      {
+         "curso": "2",
+         "grado": "SMR",
+         "modulo_id": "eabc35bd-9edf-45bc-a4a0-eac75d935297",
+         "nombre": "Entor"
+      },
+      {
+         "curso": "1",
+         "grado": "ASIR",
+         "modulo_id": "1173b505-0db7-4473-906a-6622b0fde586",
+         "nombre": "FOL"
+      }
+   ]
+}

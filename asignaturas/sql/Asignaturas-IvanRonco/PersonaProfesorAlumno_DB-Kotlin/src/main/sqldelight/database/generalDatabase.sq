@@ -1,0 +1,59 @@
+-- Creó la tabla de Profesores:
+CREATE TABLE IF NOT EXISTS ProfesoresEntities(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NOMBRE TEXT NOT NULL,
+    MODULO TEXT NOT NULL
+);
+
+-- Creó la tabla de Alumnos:
+CREATE TABLE IF NOT EXISTS AlumnosEntities(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    NOMBRE TEXT NOT NULL,
+    EDAD INTEGER NOT NULL
+);
+
+-- Empiezo a crear las funciones sobre la tabla de profesores:
+getAllProfesores:
+SELECT * FROM ProfesoresEntities;
+
+getProfesorById:
+SELECT * FROM ProfesoresEntities WHERE ID = ?;
+
+createProfesor:
+INSERT INTO ProfesoresEntities (NOMBRE, MODULO) VALUES
+(?, ?);
+
+updateProfesor:
+UPDATE ProfesoresEntities SET NOMBRE = ?, MODULO = ? WHERE ID = ?;
+
+getLastInsertedProfesor:
+SELECT * FROM ProfesoresEntities WHERE ID = last_insert_rowid();
+
+deleteProfesorById:
+DELETE FROM ProfesoresEntities WHERE ID = ?;
+
+deleteAllProfesores:
+DELETE FROM ProfesoresEntities;
+
+-- Empiezo a crear las funciones sobre la tabla de profesores:
+getAllAlumnos:
+SELECT * FROM AlumnosEntities;
+
+getAlumnoById:
+SELECT * FROM AlumnosEntities WHERE ID = ?;
+
+createAlumno:
+INSERT INTO AlumnosEntities (NOMBRE, EDAD) VALUES
+ (?, ?);
+
+updateAlumno:
+UPDATE AlumnosEntities SET NOMBRE = ?, EDAD = ? WHERE ID = ?;
+
+getLastInsertedAlumno:
+SELECT * FROM AlumnosEntities WHERE ID = last_insert_rowid();
+
+deleteAlumnoById:
+DELETE FROM AlumnosEntities WHERE ID = ?;
+
+deleteAllAlumnos:
+DELETE FROM AlumnosEntities;

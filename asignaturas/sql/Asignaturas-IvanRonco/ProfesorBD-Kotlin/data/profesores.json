@@ -1,0 +1,29 @@
+{
+   "profesores": [
+      {
+         "uuid": "64b7c56b-aff8-401d-a928-bb104be5cafe",
+         "nombre": "Iván",
+         "experiencia": "22"
+      },
+      {
+         "uuid": "4e63a024-26d6-4e00-a9f7-d41b9e7a12cc",
+         "nombre": "Ramón",
+         "experiencia": "13"
+      },
+      {
+         "uuid": "e0740518-0c1a-4be7-9210-fcfbfbd6c7ee",
+         "nombre": "Iván",
+         "experiencia": "36"
+      },
+      {
+         "uuid": "0dee260e-5b5d-4c55-a25c-d7ee9916a9a6",
+         "nombre": "BobbyExperience",
+         "experiencia": "29"
+      },
+      {
+         "uuid": "60509418-1b08-4ea7-97cf-1f9b0a1d7ac4",
+         "nombre": "BobbyExperience",
+         "experiencia": "30"
+      }
+   ]
+}

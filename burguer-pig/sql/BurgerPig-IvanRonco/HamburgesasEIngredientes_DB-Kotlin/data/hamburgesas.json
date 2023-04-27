@@ -1,0 +1,89 @@
+{
+   "hamburgesasDto": [
+      {
+         "id": "7bb563c2-c840-4a34-8c56-e9b2138cfd27",
+         "nombre": "Hamburgesa de pollo",
+         "ingredientes": [
+            {
+               "id": "1",
+               "nombre": "Salsa",
+               "precio": "5.93"
+            }
+         ]
+      },
+      {
+         "id": "8ae8f52b-d1d8-42a8-8434-60d347a68760",
+         "nombre": "Hamburgesa de pollo",
+         "ingredientes": [
+            {
+               "id": "2",
+               "nombre": "Cebolla",
+               "precio": "1.03"
+            },
+            {
+               "id": "3",
+               "nombre": "Carne",
+               "precio": "2.99"
+            },
+            {
+               "id": "1",
+               "nombre": "Salsa",
+               "precio": "5.93"
+            },
+            {
+               "id": "4",
+               "nombre": "Pepinillo",
+               "precio": "4.79"
+            }
+         ]
+      },
+      {
+         "id": "77c49635-5455-4a3f-942e-597ef5717287",
+         "nombre": "Hamburgesa de cerdo",
+         "ingredientes": [
+            {
+               "id": "2",
+               "nombre": "Cebolla",
+               "precio": "1.03"
+            }
+         ]
+      },
+      {
+         "id": "7c520530-d780-4b95-8e97-f23a05ba218a",
+         "nombre": "Hamburgesa de vaca",
+         "ingredientes": [
+            {
+               "id": "2",
+               "nombre": "Cebolla",
+               "precio": "1.03"
+            },
+            {
+               "id": "1",
+               "nombre": "Salsa",
+               "precio": "5.93"
+            },
+            {
+               "id": "3",
+               "nombre": "Carne",
+               "precio": "2.99"
+            }
+         ]
+      },
+      {
+         "id": "abbf6b70-afa2-4516-8838-1b1038291dd2",
+         "nombre": "Hamburgesa de pollo",
+         "ingredientes": [
+            {
+               "id": "1",
+               "nombre": "Salsa",
+               "precio": "5.93"
+            },
+            {
+               "id": "3",
+               "nombre": "Carne",
+               "precio": "2.99"
+            }
+         ]
+      }
+   ]
+}
