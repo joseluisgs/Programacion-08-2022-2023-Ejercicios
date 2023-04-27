@@ -61,6 +61,8 @@ class BurguerRepository : IRepositoryCrudToLineas<Burguer> {
     override fun saveItem(item: Burguer): Burguer {
 
         if (existItem(item)){
+            logger.debug { "${this::class.simpleName}: Modificando ${item::class.simpleName}" }
+
             // Update
             db.transaction {
                 db.updateBurguer(
@@ -82,6 +84,8 @@ class BurguerRepository : IRepositoryCrudToLineas<Burguer> {
             }
             return toBurguer(db.getByIdBurguer(item.uuid.toString()).executeAsOne())
         }else{
+            logger.debug { "${this::class.simpleName}: Insertando ${item::class.simpleName}" }
+
             // Insert
             db.transaction {
                 db.insertBurguer(
