@@ -1,0 +1,51 @@
+a17d5157-7320-4c8e-b09d-d9111b23e7ec
+Hamburgesa de vaca
+*
+1
+Pan
+1.65
+/
+d3d6a928-ec2e-4ee8-b3df-5e51a3a26ad7
+Hamburgesa de cerdo
+*
+1
+Pan
+1.65
+*
+2
+Cebolla
+3.24
+/
+60ff0cfc-9ed6-4acc-a62c-cb37fae8d9dd
+Hamburgesa de cerdo
+*
+3
+Lechuga
+5.14
+*
+2
+Cebolla
+3.24
+/
+edab4e47-f00b-47ec-8344-b688d7f61dc9
+Hamburgesa de cerdo
+*
+2
+Cebolla
+3.24
+/
+f2bf1d1f-8672-4942-8992-290e2c422347
+Hamburgesa de vaca
+*
+3
+Lechuga
+5.14
+*
+2
+Cebolla
+3.24
+*
+1
+Pan
+1.65
+/
