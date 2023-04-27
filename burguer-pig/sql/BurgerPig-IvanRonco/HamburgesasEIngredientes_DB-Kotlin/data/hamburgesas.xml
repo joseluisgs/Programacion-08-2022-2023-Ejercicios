@@ -1,0 +1,20 @@
+<listaHamburgesasDto>
+   <hamburgesa id="9c693eb8-2454-44aa-8397-66aa3029c53d" nombre="Hamburgesa de pollo">
+      <ingrediente id="6" nombre="Carne" precio="2.2"/>
+      <ingrediente id="4" nombre="Pepinillo" precio="3.99"/>
+   </hamburgesa>
+   <hamburgesa id="cfe70aa6-a229-4f28-bc37-e393cbd3e395" nombre="Hamburgesa de cerdo">
+      <ingrediente id="6" nombre="Carne" precio="2.2"/>
+   </hamburgesa>
+   <hamburgesa id="01116dc2-8ce0-4eac-881a-b42b3133fbba" nombre="Hamburgesa de vaca">
+      <ingrediente id="4" nombre="Pepinillo" precio="3.99"/>
+   </hamburgesa>
+   <hamburgesa id="c4eec790-5342-4f44-8a1a-2a563b27861b" nombre="Hamburgesa de vaca">
+      <ingrediente id="6" nombre="Carne" precio="2.2"/>
+      <ingrediente id="4" nombre="Pepinillo" precio="3.99"/>
+   </hamburgesa>
+   <hamburgesa id="bc420a22-f069-4f90-a285-25a1aae2138b" nombre="Hamburgesa de vaca">
+      <ingrediente id="4" nombre="Pepinillo" precio="3.99"/>
+      <ingrediente id="6" nombre="Carne" precio="2.2"/>
+   </hamburgesa>
+</listaHamburgesasDto>

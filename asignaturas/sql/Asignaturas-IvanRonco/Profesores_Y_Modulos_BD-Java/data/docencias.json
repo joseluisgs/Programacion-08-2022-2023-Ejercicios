@@ -1,0 +1,29 @@
+{
+   "docencia": [
+      {
+         "grupo": "2ºA",
+         "modulo_id": "6ba84309-d45f-42ed-a416-72c0ed253e36",
+         "profesor_id": "1"
+      },
+      {
+         "grupo": "3ºB",
+         "modulo_id": "a2379b55-9d4b-4c4c-95c7-9f8f1c9971e5",
+         "profesor_id": "1"
+      },
+      {
+         "grupo": "1ºC",
+         "modulo_id": "cdcd9b49-96ce-4d03-bbab-39fe887f1563",
+         "profesor_id": "1"
+      },
+      {
+         "grupo": "3ºA",
+         "modulo_id": "192f044f-5f6b-4808-8c20-ff10377dbb6d",
+         "profesor_id": "2"
+      },
+      {
+         "grupo": "1ºC",
+         "modulo_id": "b99d791e-4b2e-4257-bddb-0bb6d8040220",
+         "profesor_id": "2"
+      }
+   ]
+}

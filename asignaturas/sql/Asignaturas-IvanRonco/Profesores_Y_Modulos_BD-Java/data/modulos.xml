@@ -1,0 +1,46 @@
+<modulos>
+   <modulo class="java.util.ImmutableCollections$ListN">
+      <modulo>
+         <modulo_id>63b1c2d2-40ca-4c91-8bec-48802b9cd25f</modulo_id>
+         <nombre>LDM</nombre>
+         <curso>1</curso>
+         <grado>DAM</grado>
+      </modulo>
+      <modulo>
+         <modulo_id>a5a801f7-9548-4d25-9c3a-3f346c21f0d3</modulo_id>
+         <nombre>LDM</nombre>
+         <curso>1</curso>
+         <grado>ASIR</grado>
+      </modulo>
+      <modulo>
+         <modulo_id>bb4ab7fd-f7d9-4780-be92-70c5df7dc579</modulo_id>
+         <nombre>Sist</nombre>
+         <curso>1</curso>
+         <grado>DAW</grado>
+      </modulo>
+      <modulo>
+         <modulo_id>fbfb439b-a748-4411-a9ca-74961f63bc5a</modulo_id>
+         <nombre>BD</nombre>
+         <curso>2</curso>
+         <grado>SMR</grado>
+      </modulo>
+      <modulo>
+         <modulo_id>cf709644-8506-48e6-ae80-22df98ebb792</modulo_id>
+         <nombre>Prog</nombre>
+         <curso>2</curso>
+         <grado>ASIR</grado>
+      </modulo>
+      <modulo>
+         <modulo_id>366e9fe7-bdfe-41d4-9fbc-15dadfc30c4c</modulo_id>
+         <nombre>Entor</nombre>
+         <curso>2</curso>
+         <grado>SMR</grado>
+      </modulo>
+      <modulo>
+         <modulo_id>dec4c5f8-fe1f-4eb3-a2c3-5360ff964dd7</modulo_id>
+         <nombre>FOL</nombre>
+         <curso>1</curso>
+         <grado>ASIR</grado>
+      </modulo>
+   </modulo>
+</modulos>
