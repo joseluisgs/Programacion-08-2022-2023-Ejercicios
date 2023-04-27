@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="repositories.conductores.ConductorRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-27T08:47:53" hostname="JIAPC" time="0.178">
+  <properties/>
+  <testcase name="clearTables()" classname="repositories.conductores.ConductorRepositoryTest" time="0.077"/>
+  <testcase name="saveIntoDataBase()" classname="repositories.conductores.ConductorRepositoryTest" time="0.05"/>
+  <testcase name="deleteFromDatabaseById()" classname="repositories.conductores.ConductorRepositoryTest" time="0.049"/>
+  <system-out><![CDATA[10:47:53.130 [Test worker] DEBUG services.database.CochesDataBaseService -- Iniciando base de datos
+10:47:53.135 [Test worker] DEBUG config.AppConfig -- loading properties
+10:47:53.137 [Test worker] DEBUG services.database.CochesDataBaseService -- Create tables
+10:47:53.218 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Clearing Tables
+10:47:53.236 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.248 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.261 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.273 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Clearing Tables
+10:47:53.291 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Clearing Tables
+10:47:53.301 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.310 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.319 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.329 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.342 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Clearing Tables
+10:47:53.351 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.360 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.370 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Saving data into conductores
+10:47:53.381 [Test worker] DEBUG repositories.conductores.ConductorRepository -- Deleting element with uuid: 640a7716-ecbc-462b-a794-668a3cdccbef
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
