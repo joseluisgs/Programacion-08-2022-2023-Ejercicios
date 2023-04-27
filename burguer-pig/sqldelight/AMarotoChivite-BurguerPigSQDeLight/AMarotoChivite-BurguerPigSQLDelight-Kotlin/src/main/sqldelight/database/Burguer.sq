@@ -1,0 +1,50 @@
+CREATE TABLE IF NOT EXISTS BurguerTable(
+    uuid        TEXT    NOT NULL PRIMARY KEY,
+    name        TEXT    NOT NULL,
+    stock       INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS LineaBurguerTable(
+    linea_id              INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    burguer_uuid          TEXT    NOT NULL,
+    ingrediente_id        TEXT    NOT NULL,
+    ingrediente_quantity  INTEGER NOT NULL,
+    ingrediente_price     INTEGER NOT NULL
+);
+
+-- Operaciones CRUD (solo probaré con Burguer)
+getAllBurguer:
+SELECT * FROM BurguerTable;
+
+removeAllBurguer:
+DELETE FROM BurguerTable;
+
+getByIdBurguer:
+SELECT * FROM BurguerTable WHERE uuid = ?;
+
+insertBurguer:
+INSERT INTO BurguerTable (uuid, name, stock) VALUES (?, ?, ?);
+
+updateBurguer:
+UPDATE BurguerTable SET name = ?, stock = ? WHERE uuid = ?;
+
+deleteBurguer:
+DELETE FROM BurguerTable WHERE uuid = ?;
+
+-- Operacioens para las Lineas
+getAllLineasBurguer:
+SELECT * FROM LineaBurguerTable;
+
+insertLineaBurguer:
+INSERT INTO LineaBurguerTable (linea_id, burguer_uuid, ingrediente_id,ingrediente_quantity,ingrediente_price) VALUES (?, ?, ?,?,?);
+
+updateLineaBurguer:
+UPDATE LineaBurguerTable SET burguer_uuid = ?, ingrediente_id = ?, ingrediente_quantity = ?, ingrediente_price = ? WHERE linea_id = ?;
+
+deleteLineaBurguer:
+DELETE FROM LineaBurguerTable WHERE burguer_uuid = ?;
+
+removeAllLineaBurguer:
+DELETE FROM LineaBurguerTable;
+
+
