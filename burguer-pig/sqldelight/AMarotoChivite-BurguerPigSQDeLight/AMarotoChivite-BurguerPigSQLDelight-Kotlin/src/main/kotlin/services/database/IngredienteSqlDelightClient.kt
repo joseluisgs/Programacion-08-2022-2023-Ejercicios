@@ -15,11 +15,12 @@ object IngredienteSqlDelightClient {
     init {
         logger.debug { "${this::class.simpleName}: Inicializando el gestor de Bases de Datos" }
 
-        // Borramos la base de datos si está en la config=true
-/*        if (ConfigApp.getDeleteDb()) {
-            removeAllData()
-        }*/
         initConfig()
+
+        // Borramos la base de datos si está en la config=true
+        if (ConfigApp.getDeleteDb()) {
+            removeAllData()
+        }
     }
 
     private fun initConfig() {
