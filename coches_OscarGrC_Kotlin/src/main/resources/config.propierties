@@ -1,4 +1,0 @@
-database.url=jdbc:sqlite::memory:
-output.file=data
-data.input=data
-data.output=data
