@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "uuid": "ad8b81d6-504a-42e5-80a8-aebc118a154f",
+    "name": "Hamburguesa",
+    "cantidad": 1,
+    "lineaHamburguesa": [
+      {
+        "lineaId": 1,
+        "idIngrediente": 1,
+        "idHamburguesa": 1,
+        "precioIngrediente": 1.77,
+        "cantidadIngrediente": 10
+      },
+      {
+        "lineaId": 2,
+        "idIngrediente": 2,
+        "idHamburguesa": 1,
+        "precioIngrediente": 3.61,
+        "cantidadIngrediente": 10
+      }
+    ],
+    "createdAt": "2023-04-28T02:03:34.568597900",
+    "updatedAt": "2023-04-28T02:03:34.568597900"
+  }
+]
