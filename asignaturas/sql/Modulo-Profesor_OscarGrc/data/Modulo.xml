@@ -1,0 +1,14 @@
+<ModulosDTOList>
+   <ModuloDTO>
+      <UUID>00b9113f-c5ef-456f-b05d-5bc00a41fd52</UUID>
+      <nombre>JoseL</nombre>
+      <curso>1</curso>
+      <grado>ASIR</grado>
+   </ModuloDTO>
+   <ModuloDTO>
+      <UUID>fa421f76-c463-4e2c-9be8-6cdcef95f03a</UUID>
+      <nombre>Carmen2</nombre>
+      <curso>1</curso>
+      <grado>DAM</grado>
+   </ModuloDTO>
+</ModulosDTOList>
