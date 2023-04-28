@@ -1,0 +1,4 @@
+<List_Ingredientes>
+   <Ingredientes id="1" uuid="e81e7fa1-06fd-4d05-be49-edf5c231f739" name="Pan" price="2.0" disponible="true" cantidad="10" createdAt="2023-04-28T01:30:54.188419600" updatedAt="2023-04-28T01:30:54.188419600"/>
+   <Ingredientes id="2" uuid="52b1f4f0-a6f5-49c3-afae-7bb0fa478f01" name="Lechuga" price="3.58" disponible="true" cantidad="10" createdAt="2023-04-28T01:30:54.364419" updatedAt="2023-04-28T01:30:54.364419"/>
+</List_Ingredientes>
