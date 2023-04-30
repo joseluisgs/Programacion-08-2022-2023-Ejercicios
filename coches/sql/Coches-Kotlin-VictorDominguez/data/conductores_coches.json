@@ -1,0 +1,109 @@
+[
+  {
+    "id": "490787cc-6c6c-40c0-af21-22667ccf4c2e",
+    "nombre": "Alvaro",
+    "fechaCarnet": "2022-09-12",
+    "coches": [
+      {
+        "id": 1,
+        "idCond": "490787cc-6c6c-40c0-af21-22667ccf4c2e",
+        "marca": "Renault",
+        "modelo": "Megan",
+        "precio": 16000.0,
+        "tipoMotor": "Electrico"
+      },
+      {
+        "id": 6,
+        "idCond": "490787cc-6c6c-40c0-af21-22667ccf4c2e",
+        "marca": "Peugeot",
+        "modelo": "208",
+        "precio": 22900.0,
+        "tipoMotor": "Gasolina"
+      }
+    ]
+  },
+  {
+    "id": "d41046f3-ffc4-4ea4-8d9b-32f98a6e1012",
+    "nombre": "Marta",
+    "fechaCarnet": "2016-04-16",
+    "coches": [
+      {
+        "id": 2,
+        "idCond": "d41046f3-ffc4-4ea4-8d9b-32f98a6e1012",
+        "marca": "Citroen",
+        "modelo": "Berlingo",
+        "precio": 20600.0,
+        "tipoMotor": "Gasolina"
+      },
+      {
+        "id": 4,
+        "idCond": "d41046f3-ffc4-4ea4-8d9b-32f98a6e1012",
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "precio": 30000.0,
+        "tipoMotor": "Electrico"
+      },
+      {
+        "id": 7,
+        "idCond": "d41046f3-ffc4-4ea4-8d9b-32f98a6e1012",
+        "marca": "Citroen",
+        "modelo": "C3",
+        "precio": 16000.0,
+        "tipoMotor": "Diesel"
+      }
+    ]
+  },
+  {
+    "id": "eaada6bc-22ad-4e79-8862-5fd90c33eb55",
+    "nombre": "Lucia",
+    "fechaCarnet": "2014-10-02",
+    "coches": [
+      {
+        "id": 3,
+        "idCond": "eaada6bc-22ad-4e79-8862-5fd90c33eb55",
+        "marca": "Peugot",
+        "modelo": "C4",
+        "precio": 24700.0,
+        "tipoMotor": "Diesel"
+      },
+      {
+        "id": 9,
+        "idCond": "eaada6bc-22ad-4e79-8862-5fd90c33eb55",
+        "marca": "Renault",
+        "modelo": "Clio",
+        "precio": 22000.0,
+        "tipoMotor": "Hibrido"
+      }
+    ]
+  },
+  {
+    "id": "44fa1d25-0cf6-425c-8960-498d8d8cc85b",
+    "nombre": "Roberto",
+    "fechaCarnet": "2003-07-25",
+    "coches": [
+      {
+        "id": 5,
+        "idCond": "44fa1d25-0cf6-425c-8960-498d8d8cc85b",
+        "marca": "Toyota",
+        "modelo": "Camry",
+        "precio": 19000.0,
+        "tipoMotor": "Hibrido"
+      }
+    ]
+  },
+  {
+    "id": "d4174278-ec1c-41f1-b211-c35acce260b4",
+    "nombre": "Raquel",
+    "fechaCarnet": "2023-01-23",
+    "coches": [
+      {
+        "id": 8,
+        "idCond": "d4174278-ec1c-41f1-b211-c35acce260b4",
+        "marca": "Ford",
+        "modelo": "Focus",
+        "precio": 36790.0,
+        "tipoMotor": "Electrico"
+      }
+    ]
+  }
+]

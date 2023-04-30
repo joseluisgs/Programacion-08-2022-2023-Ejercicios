@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS TConductores;
+DROP TABLE IF EXISTS TCoches;
+
+CREATE TABLE IF NOT EXISTS TConductores(
+    id          VARCHAR PRIMARY KEY NOT NULL,
+    nombre      VARCHAR NOT NULL,
+    fechaCarnet VARCHAR NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS TCoches(
+    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    idCond  VARCHAR NOT NULL,
+    marca   VARCHAR NOT NULL,
+    modelo  VARCHAR NOT NULL,
+    precio  REAL NOT NULL,
+    motor   VARCHAR NOT NULL,
+    FOREIGN KEY (idCond) REFERENCES TConductores(id)
+);

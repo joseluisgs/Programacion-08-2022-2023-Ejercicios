@@ -1,0 +1,10 @@
+﻿ID;ID_Conductor;Marca;Modelo;Precio;Tipo_Motor
+1;490787cc-6c6c-40c0-af21-22667ccf4c2e;Renault;Megan;16000.00;Electrico
+2;d41046f3-ffc4-4ea4-8d9b-32f98a6e1012;Citroen;Berlingo;20600.00;Gasolina
+3;eaada6bc-22ad-4e79-8862-5fd90c33eb55;Peugot;C4;24700.00;Diesel
+4;d41046f3-ffc4-4ea4-8d9b-32f98a6e1012;Ford;Mustang;30000.00;Electrico
+5;44fa1d25-0cf6-425c-8960-498d8d8cc85b;Toyota;Camry;19000.00;Hibrido
+6;490787cc-6c6c-40c0-af21-22667ccf4c2e;Peugeot;208;22900.00;Gasolina
+7;d41046f3-ffc4-4ea4-8d9b-32f98a6e1012;Citroen;C3;16000.00;Diesel
+8;d4174278-ec1c-41f1-b211-c35acce260b4;Ford;Focus;36790.00;Electrico
+9;eaada6bc-22ad-4e79-8862-5fd90c33eb55;Renault;Clio;22000.00;Hibrido
