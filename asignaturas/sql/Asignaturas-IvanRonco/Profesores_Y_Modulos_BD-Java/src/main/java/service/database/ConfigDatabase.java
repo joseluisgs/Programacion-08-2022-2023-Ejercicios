@@ -5,6 +5,7 @@ import org.apache.ibatis.jdbc.ScriptRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,18 +13,32 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConfigDatabase {
+public class ConfigDatabase{
     private static ConfigDatabase instance = null;
-    public ConfigDatabase() throws IOException, SQLException {
-        initDatabase();
-    }
-    public static ConfigDatabase getInstance() throws IOException, SQLException {
+    public static ConfigDatabase getInstance() {
         if (instance == null) instance = new ConfigDatabase();
         return instance;
     }
+
+    @Inject
+    public ConfigDatabase() {
+        try{
+            initDatabase();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private Logger logger = LoggerFactory.getLogger(ConfigDatabase.class);
-    public Connection connection;
-    private boolean initDatabase = ConfigApp.getInstance().APP_INIT_DATABASE;
+    public static Connection connection;
+    private boolean initDatabase;
+
+    {
+        initDatabase = ConfigApp.getInstance().APP_INIT_DATABASE;
+    }
+
     public void openConnection() throws IOException, SQLException {
         logger.debug("Abrimos la conexión con la DB");
         // si la conexión es nula, ya ha sido cerrada.

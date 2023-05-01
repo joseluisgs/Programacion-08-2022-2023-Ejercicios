@@ -4,11 +4,13 @@ import config.ConfigApp
 import model.Hamburgesa
 import model.Ingrediente
 import mu.KotlinLogging
+import org.koin.core.annotation.Single
 import java.io.FileInputStream
 import java.sql.DriverManager
 import java.sql.Statement
 import java.util.*
 
+@Single
 class ConfigDatabase {
 
     private val logger = KotlinLogging.logger {  }
