@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS tProfesor(
+    nIdProfesor INTEGER PRIMARY KEY AUTOINCREMENT,
+    cNombre TEXT NOT NULL,
+    dIncorporacion TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tModulo(
+    cUUID TEXT PRIMARY KEY,
+    cNombre TEXT NOT NULL,
+    nCurso INTEGER NOT NULL,
+    cGrado TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tProfesor_Modulo(
+    nIdProfesor INTEGER NOT NULL,
+    cUUID TEXT NOT NULL,
+    PRIMARY KEY (nIdProfesor, cUUID),
+    FOREIGN KEY (nIdProfesor) REFERENCES tProfesor(nIdProfesor),
+    FOREIGN KEY (cUUID) REFERENCES tModulo(cUUID)
+);

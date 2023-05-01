@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "uuid": "7a5c4262-51cf-4320-97a7-43b3f630fb68",
+    "name": "Pan",
+    "price": 3.99,
+    "disponible": true,
+    "cantidad": 10,
+    "createdAt": "2023-04-28T01:26:35.195145700",
+    "updatedAt": "2023-04-28T01:26:35.195145700"
+  },
+  {
+    "id": 2,
+    "uuid": "28345d48-2e10-42b4-91bb-bc729e49a8f8",
+    "name": "Lechuga",
+    "price": 2.56,
+    "disponible": true,
+    "cantidad": 10,
+    "createdAt": "2023-04-28T01:26:35.376144500",
+    "updatedAt": "2023-04-28T01:26:35.376144500"
+  }
+]

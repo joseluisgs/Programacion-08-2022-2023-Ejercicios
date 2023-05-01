@@ -3,7 +3,7 @@
 Resuelve usando SQL nada más.
 
 - Coche (id autonumérico, marca, modelo, precio, TipoMotor (gasolina, diése, híbrido, eléctrico))
-- Cinductor(uuid, nombre, fechaCarnet)
+- Cinductor(uuid, nombre, fechaCarnet)  
 
 Un coche solo puede estar conducido por un conductor y un conductor puede conducir varios coches.
 

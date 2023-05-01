@@ -1,0 +1,12 @@
+<ProfesoresDTOList>
+   <ProfesorDTO>
+      <id>2</id>
+      <nombre>Carmen</nombre>
+      <fechaIncorporacion>2010-05-12</fechaIncorporacion>
+   </ProfesorDTO>
+   <ProfesorDTO>
+      <id>3</id>
+      <nombre>JoseL</nombre>
+      <fechaIncorporacion>2015-09-01</fechaIncorporacion>
+   </ProfesorDTO>
+</ProfesoresDTOList>

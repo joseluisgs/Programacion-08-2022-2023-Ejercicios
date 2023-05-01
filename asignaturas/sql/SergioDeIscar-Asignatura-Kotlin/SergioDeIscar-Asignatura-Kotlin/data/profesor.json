@@ -1,0 +1,88 @@
+{
+	"profesores": [
+		{
+			"id": "1",
+			"nombre": "Pepe",
+			"fechaIncorporacion": "2007-12-03",
+			"modulos": {
+				"modulos": [
+					{
+						"uuid": "00acc46f-6805-40ea-a1e3-25899ec83052",
+						"nombre": "ofimatica",
+						"curso": "1",
+						"grado": "SMR"
+					},
+					{
+						"uuid": "09d7a177-0474-48ad-96be-8f8814fbd2ab",
+						"nombre": "sistemas informaticos",
+						"curso": "1",
+						"grado": "ASIR"
+					}
+				]
+			}
+		},
+		{
+			"id": "2",
+			"nombre": "Juan",
+			"fechaIncorporacion": "2015-08-20",
+			"modulos": {
+				"modulos": [
+					{
+						"uuid": "26c7af87-5238-41b9-8324-ef071c44cc1b",
+						"nombre": "programación",
+						"curso": "1",
+						"grado": "DAW"
+					}
+				]
+			}
+		},
+		{
+			"id": "3",
+			"nombre": "Ana",
+			"fechaIncorporacion": "2020-02-11",
+			"modulos": {
+				"modulos": [
+					{
+						"uuid": "09d7a177-0474-48ad-96be-8f8814fbd2ab",
+						"nombre": "sistemas informaticos",
+						"curso": "1",
+						"grado": "ASIR"
+					},
+					{
+						"uuid": "26c7af87-5238-41b9-8324-ef071c44cc1b",
+						"nombre": "programación",
+						"curso": "1",
+						"grado": "DAW"
+					}
+				]
+			}
+		},
+		{
+			"id": "4",
+			"nombre": "Laura",
+			"fechaIncorporacion": "2023-01-20",
+			"modulos": {
+				"modulos": [
+					{
+						"uuid": "09d7a177-0474-48ad-96be-8f8814fbd2ab",
+						"nombre": "sistemas informaticos",
+						"curso": "1",
+						"grado": "ASIR"
+					},
+					{
+						"uuid": "43e71814-5275-4642-a300-9055a61759d5",
+						"nombre": "lenguaje de marcas",
+						"curso": "1",
+						"grado": "DAM"
+					},
+					{
+						"uuid": "a3f812eb-fb30-429d-90a6-acd0dcf5335f",
+						"nombre": "aplicaciones móviles",
+						"curso": "2",
+						"grado": "DAM"
+					}
+				]
+			}
+		}
+	]
+}

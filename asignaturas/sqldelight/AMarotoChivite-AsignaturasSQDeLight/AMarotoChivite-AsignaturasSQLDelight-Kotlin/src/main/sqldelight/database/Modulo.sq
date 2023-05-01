@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS ModuloTable(
+    uuid          TEXT PRIMARY KEY,
+    name          TEXT NOT NULL,
+    curso         INTEGER    NOT NULL,
+    grado         TEXT NOT NULL
+);
+
+-- Operaciones CRUD
+getAll:
+SELECT * FROM ModuloTable;
+
+removeAll:
+DELETE FROM ModuloTable;
+
+getById:
+SELECT * FROM ModuloTable WHERE uuid = ?;
+
+insert:
+INSERT INTO ModuloTable (uuid, name, curso, grado) VALUES (?,?,?,?);
+
+update:
+UPDATE ModuloTable SET name = ?, curso = ? ,grado = ? WHERE uuid = ?;
+
+delete:
+DELETE FROM ModuloTable WHERE uuid = ?;
+
+
+

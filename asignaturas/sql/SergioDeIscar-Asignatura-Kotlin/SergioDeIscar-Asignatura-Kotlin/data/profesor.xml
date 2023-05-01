@@ -1,0 +1,68 @@
+<profesores>
+   <profesor class="java.util.ArrayList">
+      <profesor id="1">
+         <nombre>Pepe</nombre>
+         <incorporacion>2007-12-03</incorporacion>
+         <modulo>
+            <modulo uuid="00acc46f-6805-40ea-a1e3-25899ec83052">
+               <nombre>ofimatica</nombre>
+               <curso>1</curso>
+               <grado>SMR</grado>
+            </modulo>
+            <modulo uuid="09d7a177-0474-48ad-96be-8f8814fbd2ab">
+               <nombre>sistemas informaticos</nombre>
+               <curso>1</curso>
+               <grado>ASIR</grado>
+            </modulo>
+         </modulo>
+      </profesor>
+      <profesor id="2">
+         <nombre>Juan</nombre>
+         <incorporacion>2015-08-20</incorporacion>
+         <modulo>
+            <modulo uuid="26c7af87-5238-41b9-8324-ef071c44cc1b">
+               <nombre>programación</nombre>
+               <curso>1</curso>
+               <grado>DAW</grado>
+            </modulo>
+         </modulo>
+      </profesor>
+      <profesor id="3">
+         <nombre>Ana</nombre>
+         <incorporacion>2020-02-11</incorporacion>
+         <modulo>
+            <modulo uuid="09d7a177-0474-48ad-96be-8f8814fbd2ab">
+               <nombre>sistemas informaticos</nombre>
+               <curso>1</curso>
+               <grado>ASIR</grado>
+            </modulo>
+            <modulo uuid="26c7af87-5238-41b9-8324-ef071c44cc1b">
+               <nombre>programación</nombre>
+               <curso>1</curso>
+               <grado>DAW</grado>
+            </modulo>
+         </modulo>
+      </profesor>
+      <profesor id="4">
+         <nombre>Laura</nombre>
+         <incorporacion>2023-01-20</incorporacion>
+         <modulo>
+            <modulo uuid="09d7a177-0474-48ad-96be-8f8814fbd2ab">
+               <nombre>sistemas informaticos</nombre>
+               <curso>1</curso>
+               <grado>ASIR</grado>
+            </modulo>
+            <modulo uuid="43e71814-5275-4642-a300-9055a61759d5">
+               <nombre>lenguaje de marcas</nombre>
+               <curso>1</curso>
+               <grado>DAM</grado>
+            </modulo>
+            <modulo uuid="a3f812eb-fb30-429d-90a6-acd0dcf5335f">
+               <nombre>aplicaciones móviles</nombre>
+               <curso>2</curso>
+               <grado>DAM</grado>
+            </modulo>
+         </modulo>
+      </profesor>
+   </profesor>
+</profesores>

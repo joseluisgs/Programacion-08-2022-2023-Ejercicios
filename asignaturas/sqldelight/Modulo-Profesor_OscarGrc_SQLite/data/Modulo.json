@@ -1,0 +1,14 @@
+[
+   {
+      "uuid": "f5d2cd8a-b96b-4ffc-be2d-77f0bcf2330f",
+      "nombre": "Carmen",
+      "curso": "1",
+      "grado": "ASIR"
+   },
+   {
+      "uuid": "52a825e5-2ccb-4325-bbda-80eb9087401b",
+      "nombre": "JoseL",
+      "curso": "2",
+      "grado": "DAW"
+   }
+]

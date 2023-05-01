@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS tConductor(
+    cIdConductor VARCHAR(36) PRIMARY KEY,
+    cNombre VARCHAR(150) NOT NULL ,
+    dCartnet VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tCoche(
+    nIdCoche INTEGER PRIMARY KEY AUTO_INCREMENT ,
+    cMarca VARCHAR(150) NOT NULL ,
+    cModelo VARCHAR(150) NOT NULL ,
+    nPrecio REAL NOT NULL ,
+    cMotor VARCHAR(150) NOT NULL ,
+    cIdConductor VARCHAR(36) NOT NULL ,
+    FOREIGN KEY (cIdConductor) REFERENCES tConductor(cIdConductor)
+);

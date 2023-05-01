@@ -1,0 +1,72 @@
+{
+	"conductores": [
+		{
+			"uuid": "31c6ac2d-8f7f-4e28-ac69-301ef38f98b2",
+			"nombre": "Paco",
+			"fechaCarnet": "2021-04-09",
+			"coches": {
+				"coches": [
+					{
+						"id": "1",
+						"marca": "Abarth",
+						"modelo": "Abarth 500C",
+						"precio": "2345.23",
+						"motor": "GASOLINA",
+						"idConductor": "31c6ac2d-8f7f-4e28-ac69-301ef38f98b2"
+					},
+					{
+						"id": "3",
+						"marca": "Alpine2",
+						"modelo": "Alpine A1102",
+						"precio": "62200.22",
+						"motor": "ELECTRICO",
+						"idConductor": "31c6ac2d-8f7f-4e28-ac69-301ef38f98b2"
+					},
+					{
+						"id": "4",
+						"marca": "Alpine3",
+						"modelo": "Alpine A1103",
+						"precio": "62200.22",
+						"motor": "ELECTRICO",
+						"idConductor": "31c6ac2d-8f7f-4e28-ac69-301ef38f98b2"
+					}
+				]
+			}
+		},
+		{
+			"uuid": "520435b1-2e5f-446d-97a1-d174d74c4edd",
+			"nombre": "Pedro",
+			"fechaCarnet": "2019-09-20",
+			"coches": {
+				"coches": [
+					{
+						"id": "2",
+						"marca": "Alfa Romeo",
+						"modelo": "Alfa Romeo Giulia",
+						"precio": "50689.4",
+						"motor": "DIESEL",
+						"idConductor": "520435b1-2e5f-446d-97a1-d174d74c4edd"
+					},
+					{
+						"id": "5",
+						"marca": "Alfa Romeo2",
+						"modelo": "Alfa Romeo Giulia",
+						"precio": "50689.4",
+						"motor": "DIESEL",
+						"idConductor": "520435b1-2e5f-446d-97a1-d174d74c4edd"
+					}
+				]
+			}
+		},
+		{
+			"uuid": "a36527f7-de9c-461f-bbea-755f6aabffb0",
+			"nombre": "Ana",
+			"fechaCarnet": "2010-05-26"
+		},
+		{
+			"uuid": "5adce674-fbf0-478e-b1dc-a250555088b8",
+			"nombre": "Pepa",
+			"fechaCarnet": "2000-09-23"
+		}
+	]
+}

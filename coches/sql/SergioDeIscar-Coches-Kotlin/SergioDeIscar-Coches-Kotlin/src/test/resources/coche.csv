@@ -1,0 +1,5 @@
+id,marca,modelo,precio,motor,idConductor
+1,Audi,A4,20000,DIESEL,2ccc8134-e398-434c-b853-a0732f32ca50
+2,Seat,Ibiza,12000,DIESEL,2ccc8134-e398-434c-b853-a0732f32ca50
+3,Renault,Megane,15000,GASOLINA,5c9de3ca-60ee-43be-813d-32d1e092efcd
+4,Ford,Focus,14000,GASOLINA,411a1904-42fb-4714-8648-145528653da2

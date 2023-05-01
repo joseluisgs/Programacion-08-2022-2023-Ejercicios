@@ -1,0 +1,25 @@
+{
+  "coches": [
+    {
+      "id": 0,
+      "marca": "Ferrari",
+      "modelo": "A1231",
+      "precio": 150.0,
+      "tipoMotor": "DIESEL"
+    },
+    {
+      "id": 1,
+      "marca": "Toyota",
+      "modelo": "JH12312",
+      "precio": 17.123,
+      "tipoMotor": "GASOLINA"
+    },
+    {
+      "id": 2,
+      "marca": "Citroen",
+      "modelo": "H1241",
+      "precio": 23.144,
+      "tipoMotor": "ELECTRICO"
+    }
+  ]
+}

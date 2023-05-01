@@ -1,0 +1,14 @@
+{
+  "conductores": [
+    {
+      "uuid": "1141b8ab-2f5c-4f90-8089-ae7f6a92c05c",
+      "nombre": "Carlos",
+      "fechaCarnet": "2023-04-25"
+    },
+    {
+      "uuid": "0f97d487-0cb6-461e-8d4e-9fdf174ec9b1",
+      "nombre": "Juan",
+      "fechaCarnet": "2021-03-26"
+    }
+  ]
+}
