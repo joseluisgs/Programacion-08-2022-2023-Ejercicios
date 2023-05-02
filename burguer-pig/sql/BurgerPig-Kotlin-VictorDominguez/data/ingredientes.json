@@ -1,0 +1,84 @@
+{
+  "ingredientes": [
+    {
+      "id": "1",
+      "nombre": "Pan",
+      "precio": "0.5"
+    },
+    {
+      "id": "2",
+      "nombre": "Hamburguesa de carne",
+      "precio": "3.5"
+    },
+    {
+      "id": "3",
+      "nombre": "Queso",
+      "precio": "1.0"
+    },
+    {
+      "id": "4",
+      "nombre": "Pepinillo",
+      "precio": "0.2"
+    },
+    {
+      "id": "5",
+      "nombre": "Hamburguesa de pollo",
+      "precio": "3.0"
+    },
+    {
+      "id": "6",
+      "nombre": "Ketchup",
+      "precio": "0.0"
+    },
+    {
+      "id": "7",
+      "nombre": "Mostaza",
+      "precio": "0.0"
+    },
+    {
+      "id": "8",
+      "nombre": "Mayonesa",
+      "precio": "0.2"
+    },
+    {
+      "id": "9",
+      "nombre": "Barbacoa",
+      "precio": "0.4"
+    },
+    {
+      "id": "10",
+      "nombre": "Queso Gouda",
+      "precio": "1.5"
+    },
+    {
+      "id": "11",
+      "nombre": "Cebolla",
+      "precio": "0.5"
+    },
+    {
+      "id": "12",
+      "nombre": "Lechuga",
+      "precio": "0.5"
+    },
+    {
+      "id": "13",
+      "nombre": "Tomate",
+      "precio": "0.5"
+    },
+    {
+      "id": "14",
+      "nombre": "Aros de cebolla",
+      "precio": "1.0"
+    },
+    {
+      "id": "15",
+      "nombre": "Guacamole",
+      "precio": "1.2"
+    },
+    {
+      "id": "16",
+      "nombre": "Trufa",
+      "precio": "1.7"
+    }
+  ]
+}

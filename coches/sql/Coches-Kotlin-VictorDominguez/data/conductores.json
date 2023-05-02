@@ -1,0 +1,32 @@
+[
+  {
+    "id": "490787cc-6c6c-40c0-af21-22667ccf4c2e",
+    "nombre": "Alvaro",
+    "fechaCarnet": "2022-09-12",
+    "coches": []
+  },
+  {
+    "id": "d41046f3-ffc4-4ea4-8d9b-32f98a6e1012",
+    "nombre": "Marta",
+    "fechaCarnet": "2016-04-16",
+    "coches": []
+  },
+  {
+    "id": "eaada6bc-22ad-4e79-8862-5fd90c33eb55",
+    "nombre": "Lucia",
+    "fechaCarnet": "2014-10-02",
+    "coches": []
+  },
+  {
+    "id": "44fa1d25-0cf6-425c-8960-498d8d8cc85b",
+    "nombre": "Roberto",
+    "fechaCarnet": "2003-07-25",
+    "coches": []
+  },
+  {
+    "id": "d4174278-ec1c-41f1-b211-c35acce260b4",
+    "nombre": "Raquel",
+    "fechaCarnet": "2023-01-23",
+    "coches": []
+  }
+]
