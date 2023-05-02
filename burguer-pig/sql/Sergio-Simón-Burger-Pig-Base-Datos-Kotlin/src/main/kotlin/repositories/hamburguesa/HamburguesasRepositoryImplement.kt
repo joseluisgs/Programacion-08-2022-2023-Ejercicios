@@ -178,43 +178,59 @@ class HamburguesasRepositoryImplement: HamburguesaRepository {
                     stm.executeUpdate()
                 }
             }
-//            val sql3 = "INSERT INTO hamburguesa (?, ?) " +
-//                    "SELECT ?, '?' " +
-//                    "WHERE NOT EXISTS " +
-//                    "(SELECT * FROM my_table WHERE id = ?)"
-//
-//            entity.lineaIngrediente.forEach { linea ->
-//                DataBaseService.db.use {
-//                    it.prepareStatement(sql3).use { stm ->
-//                        stm.setLong(1, linea.idIngrediente)
-//                        stm.setDouble(2, linea.precioIngrediente)
-//                        stm.setInt(3, linea.cantidadIngrediente)
-//                        stm.setLong(4, entity.id)
-//
-//                        stm.executeUpdate()
-//                    }
-//                }
         }
         return entity.copy(updatedAt = updatedTime)
     }
 
     override fun deleteById(id: Long): Boolean {
-        TODO("Not yet implemented")
+        logger.debug { "Borrando hamburguesa con id $id" }
+
+        var res = 0
+
+        val sql = """
+            DELETE FROM hamburguesa WHERE id =?
+        """.trimIndent()
+        DataBaseService.db.use {
+            it.prepareStatement(sql).use { stm ->
+                stm.setLong(1, id)
+
+                res = stm.executeUpdate()
+            }
+        }
+        return res == 1
     }
 
     override fun delete(entity: Hamburguesa): Boolean {
-        TODO("Not yet implemented")
+        logger.debug { "Borrando hamburguesa"}
+
+        return deleteById(entity.id)
     }
 
     override fun deleteAll() {
-        TODO("Not yet implemented")
+        logger.debug("Borrando todas las hamburguesas")
+
+        val sql = """
+            DELETE FROM hamburguesa
+        """.trimIndent()
+
+        DataBaseService.db.use {
+            it.prepareStatement(sql).use { stm ->
+                stm.executeUpdate()
+            }
+        }
     }
 
     override fun saveAll(entities: Iterable<Hamburguesa>) {
-        TODO("Not yet implemented")
+        logger.debug { "Guardando todas las hamburguesas" }
+
+        entities.forEach{
+            save(it)
+        }
     }
 
     override fun count(): Long {
-        TODO("Not yet implemented")
+        logger.debug { "Contando todas las hamburguesas" }
+
+        return findAll().count().toLong()
     }
 }

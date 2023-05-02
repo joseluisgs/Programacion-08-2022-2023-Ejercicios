@@ -28,7 +28,6 @@ class HamburguesaController(
     }
 
     private fun crearLineHamburguesa(hamburguesa: Hamburguesa, receta: List<Ingrediente>) {
-//        TODO("Not yet implemented")
         logger.debug {"crearLineHamburguesa $hamburguesa $receta"}
         receta.forEach {
             val ingrediente = ingredienteRepository.findById(it.id)
