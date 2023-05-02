@@ -187,8 +187,8 @@ class IngredienteRepositoryImplement: IngredienteRepository {
     }
 
     override fun count(): Long {
-        logger.debug { "Contando todos los ingredientes" }
+            logger.debug { "Contando todos los ingredientes" }
 
-        return findAll().count().toLong()
+            return findAll().count().toLong()
     }
 }
