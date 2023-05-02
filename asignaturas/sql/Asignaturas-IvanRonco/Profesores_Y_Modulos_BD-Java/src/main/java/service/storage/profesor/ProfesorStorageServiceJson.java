@@ -8,6 +8,7 @@ import models.Profesor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -27,7 +28,9 @@ public class ProfesorStorageServiceJson implements ProfesorStorageService {
     private Moshi moshi= new Moshi.Builder().build();
     private JsonAdapter adapter = moshi.adapter(ListaProfesoresDto.class);
 
-    public ProfesorStorageServiceJson() throws IOException {}
+    @Inject
+    public ProfesorStorageServiceJson() {
+    }
 
     @Override
     public void safeAll(List<Profesor> entities) {

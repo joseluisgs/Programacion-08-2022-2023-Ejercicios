@@ -12,68 +12,20 @@ import service.repository.Ingrediente.IngredienteRepositoryImpl
 import service.storageService.Hamburger.*
 import storageService.Hamburger.HamburgesaStorageService
 
-val ControllerCsv = module {
-    single { ConfigDatabase() }
-
-    single { ConfigApp(get()) }
-
-    single<HamburgesaStorageService>{ HamburgesasStorageServiceCsv(get()) }
-
-    single<HamburgesaRepository> { HamburgesaRepositoryImpl(get()) }
-    single<IngredienteRepository> { IngredienteRepositoryImpl(get()) }
-
-    single<HamburgesaController>{ HamburgesaController(get(), get(), get()) }
-}
-
 @OptIn(ExperimentalStdlibApi::class)
-val ControllerJson = module {
+val myModule = module {
     single { ConfigDatabase() }
 
     single { ConfigApp(get()) }
 
-    single<HamburgesaStorageService>{ HamburgesasStorageServiceJson(get()) }
+    single<HamburgesaStorageService>(named("StorageCsv")){ HamburgesasStorageServiceCsv(get()) }
+    single<HamburgesaStorageService>(named("StorageXml")){ HamburgesasStorageServiceXml(get()) }
+    single<HamburgesaStorageService>(named("StorageJson")){ HamburgesasStorageServiceJson(get()) }
+    single<HamburgesaStorageService>(named("StorageTxt")){ HamburgesasStorageServiceTxt(get()) }
+    single<HamburgesaStorageService>(named("StorageSer")){ HamburgesasStorageServiceSer(get()) }
 
     single<HamburgesaRepository> { HamburgesaRepositoryImpl(get()) }
     single<IngredienteRepository> { IngredienteRepositoryImpl(get()) }
 
-    single<HamburgesaController>{ HamburgesaController(get(), get(), get()) }
-}
-
-val ControllerXml = module {
-    single { ConfigDatabase() }
-
-    single { ConfigApp(get()) }
-
-    single<HamburgesaStorageService> { HamburgesasStorageServiceXml(get()) }
-
-    single<HamburgesaRepository> { HamburgesaRepositoryImpl(get()) }
-    single<IngredienteRepository> { IngredienteRepositoryImpl(get()) }
-
-    single<HamburgesaController>{ HamburgesaController(get(), get(), get()) }
-}
-
-val ControllerTxt = module {
-    single { ConfigDatabase() }
-
-    single { ConfigApp(get()) }
-
-    single<HamburgesaStorageService> { HamburgesasStorageServiceTxt(get()) }
-
-    single<HamburgesaRepository> { HamburgesaRepositoryImpl(get()) }
-    single<IngredienteRepository> { IngredienteRepositoryImpl(get()) }
-
-    single<HamburgesaController>{ HamburgesaController(get(), get(), get()) }
-}
-
-val ControllerSer = module {
-    single { ConfigDatabase() }
-
-    single { ConfigApp(get()) }
-
-    single<HamburgesaStorageService> { HamburgesasStorageServiceSer(get()) }
-
-    single<HamburgesaRepository> { HamburgesaRepositoryImpl(get()) }
-    single<IngredienteRepository> { IngredienteRepositoryImpl(get()) }
-
-    single<HamburgesaController>{ HamburgesaController(get(), get(), get()) }
+    single<HamburgesaController>{ HamburgesaController(get(), get(named("StorageCsv")), get()) }
 }

@@ -56,6 +56,6 @@ private fun String.fromCsv(): MutableList<Ingrediente> {
 
 private fun  List<Ingrediente>.toCsv(): String {
     return this.joinToString(separator = "|") {
-        "${it.id};${it.nombre};${it.precio}"
+        "${it.id},${it.nombre},${it.precio}"
     }
 }

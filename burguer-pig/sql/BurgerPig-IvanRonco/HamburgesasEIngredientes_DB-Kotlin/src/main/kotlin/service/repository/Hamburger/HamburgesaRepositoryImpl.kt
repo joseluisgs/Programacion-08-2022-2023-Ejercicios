@@ -2,9 +2,11 @@ package service.repository.Hamburger
 
 import model.Hamburgesa
 import mu.KotlinLogging
+import org.koin.core.annotation.Single
 import service.database.ConfigDatabase
 import java.util.*
 
+@Single
 class HamburgesaRepositoryImpl(
     private val configDatabase: ConfigDatabase
 ): HamburgesaRepository {

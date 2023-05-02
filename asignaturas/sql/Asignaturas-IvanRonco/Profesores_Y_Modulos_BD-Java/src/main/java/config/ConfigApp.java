@@ -3,6 +3,7 @@ package config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,11 +14,16 @@ import java.util.Properties;
 
 public class ConfigApp {
     private static ConfigApp instance = null;
-    public ConfigApp() throws IOException {
-        loadProperties();
-        initStorage();
+    @Inject
+    public ConfigApp() {
+        try {
+            loadProperties();
+            initStorage();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
-    public static ConfigApp getInstance() throws IOException {
+    public static ConfigApp getInstance() {
         if (instance == null) instance = new ConfigApp();
         return instance;
     }

@@ -6,6 +6,7 @@ import models.Profesor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -17,13 +18,20 @@ import static utils.Utils.toEnumGrado;
 
 public class BaseQueries {
 
-    private static Logger logger = LoggerFactory.getLogger(BaseQueries.class);
+    private ConfigDatabase configDatabase;
 
-    public static List<Docencia> getAllDocencias() throws SQLException, IOException {
+    @Inject
+    public BaseQueries(ConfigDatabase configDatabase) {
+        this.configDatabase = configDatabase;
+    }
+
+    private Logger logger = LoggerFactory.getLogger(BaseQueries.class);
+
+    public List<Docencia> getAllDocencias() throws SQLException, IOException {
         logger.debug("Consigo todas las docencias");
         List<Docencia> docencias = new ArrayList<Docencia>();
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "SELECT * FROM DOCENCIA";
 
             ResultSet resultSet = connection.prepareStatement(sqlModulos).executeQuery();
@@ -43,12 +51,12 @@ public class BaseQueries {
         return docencias;
     }
 
-    public static List<Profesor> getAllProfesores() throws SQLException, IOException {
+    public List<Profesor> getAllProfesores() throws SQLException, IOException {
         logger.debug("Consigo todos los profesores");
         List<Profesor> profesores = new ArrayList<Profesor>();
         List<Modulo> modulos = new ArrayList<Modulo>();
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlProfesor = "SELECT * FROM PROFESOR;";
             String sqlModulos = "SELECT * FROM MODULO WHERE UUID IN (SELECT MODULO FROM DOCENCIA WHERE PROFESOR = ?);";
 
@@ -87,12 +95,12 @@ public class BaseQueries {
         return profesores;
     }
 
-    public static Profesor getProfesoreById(Long id) throws SQLException, IOException {
+    public Profesor getProfesoreById(Long id) throws SQLException, IOException {
         logger.debug("Consigo el profesor con id: "+id);
         Profesor profesor = null;
         List<Modulo> modulos = new ArrayList<Modulo>();
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlProfesor = "SELECT * FROM PROFESOR WHERE ID = ?;";
             String sqlModulos = "SELECT * FROM MODULO WHERE UUID IN (SELECT MODULO FROM DOCENCIA WHERE PROFESOR = ?);";
 
@@ -129,7 +137,7 @@ public class BaseQueries {
         return profesor;
     }
 
-    public static Profesor createProfesor(Profesor profesor) throws SQLException, IOException {
+    public Profesor createProfesor(Profesor profesor) throws SQLException, IOException {
         logger.debug("Creo un nuevo profesor");
 
         long myId = 0L;
@@ -142,7 +150,7 @@ public class BaseQueries {
         }
 
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "INSERT INTO PROFESOR VALUES (null, ?, ?);";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos, Statement.RETURN_GENERATED_KEYS);
@@ -180,7 +188,7 @@ public class BaseQueries {
         );
     }
 
-    public static Profesor updateProfesor(Profesor profesor) throws SQLException, IOException {
+    public Profesor updateProfesor(Profesor profesor) throws SQLException, IOException {
         logger.debug("Actualizo un profesor");
 
         List<Modulo> modulos = profesor.getModulos();
@@ -193,7 +201,7 @@ public class BaseQueries {
         }
 
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
                 String sqlModulos = "UPDATE PROFESOR SET NOMBRE = ?, FECHA_INCORPORACION = ? WHERE ID = ?;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -229,10 +237,10 @@ public class BaseQueries {
         return profesor;
     }
 
-    public static void deleteAllProfesores() throws SQLException, IOException {
+    public void deleteAllProfesores() throws SQLException, IOException {
         logger.debug("Borro todos los módulos");
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "DELETE FROM PROFESOR;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -243,10 +251,10 @@ public class BaseQueries {
         }
     }
 
-    public static void deleteProfesorById(Long id) throws SQLException, IOException {
+    public void deleteProfesorById(Long id) throws SQLException, IOException {
         logger.debug("Borro el módulo de id: "+id);
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "DELETE FROM PROFESOR WHERE ID = ?;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -259,11 +267,11 @@ public class BaseQueries {
         }
     }
 
-    public static List<Modulo> getAllModulos() throws SQLException, IOException {
+    public List<Modulo> getAllModulos() throws SQLException, IOException {
         logger.debug("Consigo todos los módulo");
         List<Modulo> modulos = new ArrayList<Modulo>();
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "SELECT * FROM MODULO";
 
             ResultSet resultSet = connection.prepareStatement(sqlModulos).executeQuery();
@@ -284,11 +292,11 @@ public class BaseQueries {
         return modulos;
     }
 
-    public static Modulo getModuloById(UUID uuid) throws SQLException, IOException {
+    public Modulo getModuloById(UUID uuid) throws SQLException, IOException {
         logger.debug("Consigo el módulo con id: "+uuid);
         Modulo modulo = null;
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "SELECT * FROM MODULO WHERE UUID = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -310,10 +318,10 @@ public class BaseQueries {
         return modulo;
     }
 
-    public static Modulo createModulo(Modulo modulo) throws SQLException, IOException {
+    public Modulo createModulo(Modulo modulo) throws SQLException, IOException {
         logger.debug("Creo un nuevo módulo");
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "INSERT INTO MODULO VALUES (?, ?, ?, ?);";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -330,10 +338,10 @@ public class BaseQueries {
         return modulo;
     }
 
-    public static Modulo updateModulo(Modulo modulo) throws SQLException, IOException {
+    public Modulo updateModulo(Modulo modulo) throws SQLException, IOException {
         logger.debug("Actualizo un módulo");
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "UPDATE MODULO SET NOMBRE = ?, CURSO = ?, GRADO = ? WHERE UUID = ?;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -350,10 +358,10 @@ public class BaseQueries {
         return modulo;
     }
 
-    public static void deleteAllModulos() throws SQLException, IOException {
+    public void deleteAllModulos() throws SQLException, IOException {
         logger.debug("Borro todos los módulos");
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "DELETE FROM MODULO;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);
@@ -364,10 +372,10 @@ public class BaseQueries {
         }
     }
 
-    public static void deleteModuloById(UUID uuid) throws SQLException, IOException {
+    public void deleteModuloById(UUID uuid) throws SQLException, IOException {
         logger.debug("Borro el módulo de id: "+uuid);
         try {
-            Connection connection = ConfigDatabase.getInstance().connection;
+            Connection connection = configDatabase.connection;
             String sqlModulos = "DELETE FROM MODULO WHERE UUID = ?;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlModulos);

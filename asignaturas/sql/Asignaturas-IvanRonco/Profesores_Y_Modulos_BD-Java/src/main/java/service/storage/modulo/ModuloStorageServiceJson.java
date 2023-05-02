@@ -8,6 +8,7 @@ import models.Modulo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,7 +20,6 @@ import static mapper.modulo.ModuloMapper.toModulos;
 import static mapper.modulo.ModuloMapper.toModulosDto;
 
 public class ModuloStorageServiceJson implements ModuloStorageService {
-
     private Logger logger = LoggerFactory.getLogger(ModuloStorageServiceJson.class);
 
     private File file = new File(ConfigApp.getInstance().APP_DATA+File.separator+"modulos.json");
@@ -27,7 +27,9 @@ public class ModuloStorageServiceJson implements ModuloStorageService {
     private Moshi moshi= new Moshi.Builder().build();
     private JsonAdapter adapter = moshi.adapter(ListaModulosDto.class);
 
-    public ModuloStorageServiceJson() throws IOException {}
+    @Inject
+    public ModuloStorageServiceJson() {
+    }
 
     @Override
     public void safeAll(List<Modulo> entities) {

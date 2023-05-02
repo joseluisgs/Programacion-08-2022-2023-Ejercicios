@@ -7,6 +7,7 @@ import org.simpleframework.xml.core.Persister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.Collections;
@@ -16,14 +17,15 @@ import static mapper.profesor.ProfesorMapper.toProfesores;
 import static mapper.profesor.ProfesorMapper.toProfesoresDto;
 
 public class ProfesorStorageServiceXml implements ProfesorStorageService {
-
     private Logger logger = LoggerFactory.getLogger(ProfesorStorageServiceXml.class);
 
     private File file = new File(ConfigApp.getInstance().APP_DATA+File.separator+"profesores.xml");
 
     private Persister persister = new Persister();
 
-    public ProfesorStorageServiceXml() throws IOException {}
+    @Inject
+    public ProfesorStorageServiceXml() {
+    }
 
     @Override
     public void safeAll(List<Profesor> entities) throws Exception {

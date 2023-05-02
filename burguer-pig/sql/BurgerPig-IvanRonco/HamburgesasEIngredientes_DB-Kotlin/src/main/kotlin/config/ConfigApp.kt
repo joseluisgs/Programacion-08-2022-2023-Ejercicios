@@ -1,6 +1,7 @@
 package config
 
 import mu.KotlinLogging
+import org.koin.core.annotation.Single
 import service.database.ConfigDatabase
 import java.io.File
 import java.io.FileInputStream
@@ -8,6 +9,7 @@ import java.nio.file.Files
 import java.util.Properties
 import kotlin.io.path.Path
 
+@Single
 class ConfigApp(
     val configDatabase: ConfigDatabase
 ) {
