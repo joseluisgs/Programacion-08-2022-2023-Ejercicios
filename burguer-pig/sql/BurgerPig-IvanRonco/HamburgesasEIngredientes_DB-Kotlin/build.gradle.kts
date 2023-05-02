@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.7.20"
     application
+    id("com.google.devtools.ksp") version "1.8.10-1.0.9"
 }
 
 group = "org.example"
@@ -28,6 +29,8 @@ dependencies {
 
     implementation("io.insert-koin:koin-core:3.4.0")
     implementation("io.insert-koin:koin-logger-slf4j:3.4.0")
+    implementation("io.insert-koin:koin-annotations:1.2.0")
+    ksp("io.insert-koin:koin-ksp-compiler:1.2.0")
 }
 
 tasks.test {
@@ -40,4 +43,14 @@ tasks.withType<KotlinCompile> {
 
 application {
     mainClass.set("MainKt")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "MainKt"
+    }
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }

@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import service.storage.docencia.DocenciaStorageServiceCsv;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -21,12 +22,13 @@ import static mapper.modulo.ModuloMapper.toModulo;
 import static mapper.modulo.ModuloMapper.toModuloDto;
 
 public class ModuloStorageServiceCsv implements ModuloStorageService {
-
     private Logger logger = LoggerFactory.getLogger(DocenciaStorageServiceCsv.class);
 
     private File file = new File(ConfigApp.getInstance().APP_DATA+File.separator+"modulos.csv");
 
-    public ModuloStorageServiceCsv() throws IOException {}
+    @Inject
+    public ModuloStorageServiceCsv() {
+    }
 
     @Override
     public void safeAll(List<Modulo> entities) {

@@ -5,6 +5,7 @@ import exception.ingredienteException.IngredienteNotFoundException
 import model.Hamburgesa
 import model.Ingrediente
 import mu.KotlinLogging
+import org.koin.core.annotation.Named
 import service.database.ConfigDatabase
 import service.repository.Hamburger.HamburgesaRepository
 import service.repository.Ingrediente.IngredienteRepository
@@ -14,6 +15,7 @@ import java.util.*
 
 class HamburgesaController(
     private val repositoryHamburgesa: HamburgesaRepository,
+    @Named("StorageCsv")
     private val hamburgesaStorage: HamburgesaStorageService,
     private val repositoryIngrediente: IngredienteRepository
 ) {

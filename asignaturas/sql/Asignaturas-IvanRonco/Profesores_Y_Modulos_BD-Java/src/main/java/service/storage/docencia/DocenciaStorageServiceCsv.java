@@ -6,6 +6,7 @@ import models.Docencia;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -17,11 +18,16 @@ import static mapper.docencia.DocenciaMapper.*;
 
 public class DocenciaStorageServiceCsv implements DocenciaStorageService{
 
+    private ConfigApp configApp;
+
     private Logger logger = LoggerFactory.getLogger(DocenciaStorageServiceCsv.class);
 
-    private File file = new File(ConfigApp.getInstance().APP_DATA+File.separator+"docencias.csv");
+    private File file = new File(configApp.APP_DATA+File.separator+"docencias.csv");
 
-    public DocenciaStorageServiceCsv() throws IOException {}
+    @Inject
+    public DocenciaStorageServiceCsv(ConfigApp configApp) {
+        this.configApp = configApp;
+    }
 
     @Override
     public void safeAll(List<Docencia> entities) {

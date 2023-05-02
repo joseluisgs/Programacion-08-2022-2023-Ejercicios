@@ -2,8 +2,10 @@ package service.repository.Ingrediente
 
 import model.Ingrediente
 import mu.KotlinLogging
+import org.koin.core.annotation.Single
 import service.database.ConfigDatabase
 
+@Single
 class IngredienteRepositoryImpl(
     private val configDatabase: ConfigDatabase
 ): IngredienteRepository {

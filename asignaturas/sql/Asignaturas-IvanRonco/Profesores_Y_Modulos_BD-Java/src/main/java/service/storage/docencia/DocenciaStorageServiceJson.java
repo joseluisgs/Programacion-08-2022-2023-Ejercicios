@@ -8,6 +8,7 @@ import models.Docencia;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,7 +20,6 @@ import static mapper.docencia.DocenciaMapper.toDocencias;
 import static mapper.docencia.DocenciaMapper.toDocenciasDto;
 
 public class DocenciaStorageServiceJson implements DocenciaStorageService{
-
     private Logger logger = LoggerFactory.getLogger(DocenciaStorageServiceJson.class);
 
     private File file = new File(ConfigApp.getInstance().APP_DATA+File.separator+"docencias.json");
@@ -27,7 +27,9 @@ public class DocenciaStorageServiceJson implements DocenciaStorageService{
     private Moshi moshi= new Moshi.Builder().build();
     private JsonAdapter adapter = moshi.adapter(ListaDocenciasDto.class);
 
-    public DocenciaStorageServiceJson() throws IOException {}
+    @Inject
+    public DocenciaStorageServiceJson() {
+    }
 
     @Override
     public void safeAll(List<Docencia> entities) {

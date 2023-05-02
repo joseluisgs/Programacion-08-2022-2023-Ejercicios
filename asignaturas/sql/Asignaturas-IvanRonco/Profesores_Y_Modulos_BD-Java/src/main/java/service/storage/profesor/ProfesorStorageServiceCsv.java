@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import service.storage.docencia.DocenciaStorageServiceCsv;
 
+import javax.inject.Inject;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -24,12 +25,13 @@ import static mapper.profesor.ProfesorMapper.toProfesor;
 import static mapper.profesor.ProfesorMapper.toProfesorDto;
 
 public class ProfesorStorageServiceCsv implements ProfesorStorageService {
-
     private Logger logger = LoggerFactory.getLogger(DocenciaStorageServiceCsv.class);
 
     private File file = new File(ConfigApp.getInstance().APP_DATA+File.separator+"profesores.csv");
 
-    public ProfesorStorageServiceCsv() throws IOException {}
+    @Inject
+    public ProfesorStorageServiceCsv() {
+    }
 
     @Override
     public void safeAll(List<Profesor> entities) {
